@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lihua.cool/"/>
-  <updated>2020-11-07T06:06:30.629Z</updated>
+  <updated>2020-11-08T02:08:17.714Z</updated>
   <id>https://www.lihua.cool/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Array.Sort 方法</title>
+    <link href="https://www.lihua.cool/article/20201108.html"/>
+    <id>https://www.lihua.cool/article/20201108.html</id>
+    <published>2020-11-08T02:04:53.000Z</published>
+    <updated>2020-11-08T02:08:17.714Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="Array-Sort-方法"><a href="#Array-Sort-方法" class="headerlink" title="Array.Sort 方法"></a>Array.Sort 方法</h4><p>命名空间:System<br>程序集:System.Runtime.dll</p><p>对一维数组中的元素进行排序。</p><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>Sort(Array, Int32, Int32, IComparer)</td><td>使用指定的 IComparer，对一维 Array 中的部分元素进行排序。</td></tr><tr><td>Sort(Array, Array, Int32, Int32, IComparer)</td><td>基于第一个 Array 中的关键字，使用指定的 IComparer，对两个一维 Array 对象（一个包含关键字，另一个包含对应的项）的部分元素进行排序。</td></tr><tr><td>Sort(Array, Int32, Int32)</td><td>使用 Array 中每个元素的 IComparable 实现，对一维 Array 中的部分元素进行排序。</td></tr><tr><td>Sort(Array, Array, Int32, Int32)</td><td>基于第一个 Array 中的关键字，使用每个关键字的 IComparable 实现，对两个一维 Array 对象（一个包含关键字，另一个包含对应的项）的部分元素进行排序。</td></tr><tr><td>Sort(Array, IComparer)</td><td>使用指定的 IComparer，对一维 Array 中的元素进行排序。</td></tr><tr><td>Sort(Array, Array, IComparer)</td><td>基于第一个 Array 中的关键字，使用指定的 IComparer，对两个一维 Array 对象（一个包含关键字，另一个包含对应的项）进行排序。</td></tr><tr><td>Sort(Array, Array)</td><td>基于第一个 Array 中的关键字，使用每个关键字的 IComparable 实现，对两个一维 Array 对象（一个包含关键字，另一个包含对应的项）进行排序。</td></tr><tr><td>Sort(Array)</td><td>使用 Array 中每个元素的 IComparable 实现，对整个一维 Array 中的元素进行排序。</td></tr><tr><td>Sort<T>(T[], IComparer<T>)</td><td>使用指定的 IComparer<T> 泛型接口，对 Array 中的元素进行排序。</td></tr></tbody></table><h3 id="Sort-Array-Int32-Int32-IComparer"><a href="#Sort-Array-Int32-Int32-IComparer" class="headerlink" title="Sort(Array, Int32, Int32, IComparer)"></a>Sort(Array, Int32, Int32, IComparer)</h3><p>使用指定的 IComparer，对一维 Array 中的部分元素进行排序。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Sort</span> (<span class="params">Array array, <span class="keyword">int</span> index, <span class="keyword">int</span> length, System.Collections.IComparer? comparer</span>)</span>;</span><br></pre></td></tr></table></figure><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>array Array<br>要排序的一维 Array。</p><p>index Int32<br>排序范围的起始索引。</p><p>length Int32<br>排序范围内的元素数。</p><p>comparer IComparer<br>比较元素时要使用的 IComparer 实现。</p><p>-或-<br>若为 null，则使用每个元素的 IComparable 实现。</p><h4 id="例外"><a href="#例外" class="headerlink" title="例外"></a>例外</h4><p>ArgumentNullException<br>array 为 null。</p><p>RankException<br>array 是多维的。</p><p>ArgumentOutOfRangeException<br>index 小于 array 的下限。</p><p>-或-<br>length 小于零。</p><p>ArgumentException<br>index 和 length 未在 array 中指定有效范围。</p><p>-或-<br>comparer 的实现导致排序时出现错误。 例如，将某个项与其自身比较时，comparer 可能不返回 0。</p><p>InvalidOperationException<br>comparer 为 null，且 array 中的一个或多个元素未实现 IComparable 接口。</p><p>From：<a href="https://docs.microsoft.com/en-US/dotnet/api/system.array.sort?view=netcore-3.1" target="_blank" rel="noopener">https://docs.microsoft.com/en-US/dotnet/api/system.array.sort?view=netcore-3.1</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Array-Sort-方法&quot;&gt;&lt;a href=&quot;#Array-Sort-方法&quot; class=&quot;headerlink&quot; title=&quot;Array.Sort 方法&quot;&gt;&lt;/a&gt;Array.Sort 方法&lt;/h4&gt;&lt;p&gt;命名空间:System&lt;br&gt;程序集:System.
+      
+    
+    </summary>
+    
+    
+    
+      <category term="C#" scheme="https://www.lihua.cool/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>利用Hexo快速创建个人博客</title>
