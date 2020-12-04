@@ -5,9 +5,9 @@
   <subtitle>Normal stuff. A nice life. Cool flat. Fun job. Someone to watch movies with.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://www.lihua.cool/"/>
+  <link href="https://www.leavel.cn/"/>
   <updated>2020-11-08T02:08:17.714Z</updated>
-  <id>https://www.lihua.cool/</id>
+  <id>https://www.leavel.cn/</id>
   
   <author>
     <name>Liu Yang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Array.Sort 方法</title>
-    <link href="https://www.lihua.cool/article/20201108.html"/>
-    <id>https://www.lihua.cool/article/20201108.html</id>
+    <link href="https://www.leavel.cn/article/20201108.html"/>
+    <id>https://www.leavel.cn/article/20201108.html</id>
     <published>2020-11-08T02:04:53.000Z</published>
     <updated>2020-11-08T02:08:17.714Z</updated>
     
@@ -36,14 +36,14 @@
     
     
     
-      <category term="C#" scheme="https://www.lihua.cool/tags/C/"/>
+      <category term="C#" scheme="https://www.leavel.cn/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>利用Hexo快速创建个人博客</title>
-    <link href="https://www.lihua.cool/article/20201107.html"/>
-    <id>https://www.lihua.cool/article/20201107.html</id>
+    <link href="https://www.leavel.cn/article/20201107.html"/>
+    <id>https://www.leavel.cn/article/20201107.html</id>
     <published>2020-11-07T05:34:53.000Z</published>
     <updated>2020-11-07T06:06:30.629Z</updated>
     
@@ -60,14 +60,14 @@
     
     
     
-      <category term="Hexo" scheme="https://www.lihua.cool/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://www.leavel.cn/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>C#  WPF</title>
-    <link href="https://www.lihua.cool/article/20200823.html"/>
-    <id>https://www.lihua.cool/article/20200823.html</id>
+    <link href="https://www.leavel.cn/article/20200823.html"/>
+    <id>https://www.leavel.cn/article/20200823.html</id>
     <published>2020-08-23T02:49:00.000Z</published>
     <updated>2020-11-07T05:46:02.369Z</updated>
     
@@ -84,16 +84,16 @@
     
     
     
-      <category term="C#" scheme="https://www.lihua.cool/tags/C/"/>
+      <category term="C#" scheme="https://www.leavel.cn/tags/C/"/>
     
-      <category term="WPF" scheme="https://www.lihua.cool/tags/WPF/"/>
+      <category term="WPF" scheme="https://www.leavel.cn/tags/WPF/"/>
     
   </entry>
   
   <entry>
     <title>自动化测试</title>
-    <link href="https://www.lihua.cool/article/20200805.html"/>
-    <id>https://www.lihua.cool/article/20200805.html</id>
+    <link href="https://www.leavel.cn/article/20200805.html"/>
+    <id>https://www.leavel.cn/article/20200805.html</id>
     <published>2020-08-05T10:37:14.000Z</published>
     <updated>2020-08-05T10:50:49.971Z</updated>
     
@@ -110,16 +110,16 @@
     
     
     
-      <category term="测试" scheme="https://www.lihua.cool/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://www.leavel.cn/tags/%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="Python" scheme="https://www.lihua.cool/tags/Python/"/>
+      <category term="Python" scheme="https://www.leavel.cn/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Oracle数据库导入备份文件</title>
-    <link href="https://www.lihua.cool/article/20200724.html"/>
-    <id>https://www.lihua.cool/article/20200724.html</id>
+    <link href="https://www.leavel.cn/article/20200724.html"/>
+    <id>https://www.leavel.cn/article/20200724.html</id>
     <published>2020-07-24T01:11:05.000Z</published>
     <updated>2020-11-08T02:36:00.221Z</updated>
     
@@ -137,14 +137,14 @@
     
     
     
-      <category term="Oracle" scheme="https://www.lihua.cool/tags/Oracle/"/>
+      <category term="Oracle" scheme="https://www.leavel.cn/tags/Oracle/"/>
     
   </entry>
   
   <entry>
     <title>Markdown</title>
-    <link href="https://www.lihua.cool/article/20200723.html"/>
-    <id>https://www.lihua.cool/article/20200723.html</id>
+    <link href="https://www.leavel.cn/article/20200723.html"/>
+    <id>https://www.leavel.cn/article/20200723.html</id>
     <published>2020-07-23T05:07:06.000Z</published>
     <updated>2020-11-08T02:35:41.470Z</updated>
     
@@ -161,14 +161,14 @@
     
     
     
-      <category term="Markdown" scheme="https://www.lihua.cool/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://www.leavel.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>VSCode  Code Format</title>
-    <link href="https://www.lihua.cool/article/20200722.html"/>
-    <id>https://www.lihua.cool/article/20200722.html</id>
+    <link href="https://www.leavel.cn/article/20200722.html"/>
+    <id>https://www.leavel.cn/article/20200722.html</id>
     <published>2020-07-22T06:13:34.000Z</published>
     <updated>2020-11-08T02:35:17.757Z</updated>
     
@@ -190,7 +190,7 @@
     
     
     
-      <category term="VSCode" scheme="https://www.lihua.cool/tags/VSCode/"/>
+      <category term="VSCode" scheme="https://www.leavel.cn/tags/VSCode/"/>
     
   </entry>
   
