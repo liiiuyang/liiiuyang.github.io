@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.leavel.cn/link/index.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.leavel.cn/about/index.html</loc>
     
     <lastmod>2021-04-24</lastmod>
@@ -102,6 +109,13 @@
   </url>
   
   <url>
+    <loc>https://www.leavel.cn/tags/WPF/</loc>
+    <lastmod>2021-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.leavel.cn/tags/Markdown/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
@@ -109,7 +123,14 @@
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/tags/WPF/</loc>
+    <loc>https://www.leavel.cn/tags/Oracle/</loc>
+    <lastmod>2021-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/tags/VSCode/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -131,20 +152,6 @@
   
   <url>
     <loc>https://www.leavel.cn/tags/Python/</loc>
-    <lastmod>2021-04-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/tags/VSCode/</loc>
-    <lastmod>2021-04-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/tags/Oracle/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
