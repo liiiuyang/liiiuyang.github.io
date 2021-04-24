@@ -102,13 +102,6 @@
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/tags/WPF/</loc>
-    <lastmod>2021-04-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.leavel.cn/tags/Markdown/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
@@ -116,14 +109,14 @@
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/tags/Oracle/</loc>
+    <loc>https://www.leavel.cn/tags/WPF/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/tags/VSCode/</loc>
+    <loc>https://www.leavel.cn/tags/Hexo/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -144,7 +137,14 @@
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/tags/Hexo/</loc>
+    <loc>https://www.leavel.cn/tags/VSCode/</loc>
+    <lastmod>2021-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/tags/Oracle/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
