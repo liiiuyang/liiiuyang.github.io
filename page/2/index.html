@@ -19,12 +19,12 @@
   
   
   
-    <link rel="alternate" href="/atom.xml " title="装修中。。。" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
   
 
   
 
-  <title>装修中。。。</title>
+  <title>Sk8erBoi的笔记</title>
 
   
 
@@ -60,7 +60,7 @@
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
         <div class="layui-container">
-                <div class="nav-title"><a href="/" title="装修中。。。">装修中。。。</a></div>
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
             <div class="nav-list">
                 <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
                 <ul class="layui-nav" lay-filter="">
@@ -92,6 +92,17 @@
                         
                         
                     <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
                         <a href="/about/ ">
                             <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
                             <span class="layui-nav-item-name">关于</span>
@@ -111,11 +122,16 @@
 <header class="header">
         
             <div class="logo">
-                    <a href="/"><img src="https://i.niupic.com/images/2020/12/04/94m3.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+                    <a href="/"><img src="https://i.niupic.com/images/2021/04/24/9gKe.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
             </div>
          
     </div>
      
+
+            <div class="motto">
+                <span>Stay hungry, stay foolish!</span>
+            </div>
+    
     
             <div class="social">
                 
@@ -158,7 +174,7 @@
                 <span title="发表于 2020.08.05"><i class="far fa-calendar-alt"></i> 2020.08.05</span>
               </div>
               <div class="post-meta-item updated">
-                <span title="更新于 2020.08.05"><i class="far fa-calendar-check"></i> 2020.08.05</span>
+                <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
               </div>
              
              
@@ -175,73 +191,13 @@
         </div>
           <div class="content">
             
-                  <h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><p>open 打开网址 Target<br>click 点击 Target(id=kw ) （定位要点击的ID）<br>type 输入内容 Target (id=kw ) Value (要输入的内容)<br>click Target（id=su）<br>refresh 刷新 没有参数<br>goBack 返回<br>pause 暂停 Target(5000)单位为毫秒<br>windowMaximize 窗口最大化<br>select模拟人工单击下拉列表框 value(里面填定位到的值) label(里面填真实的值)<br>例：select Target name=CookieDate Value label=留一天<br>  clickAndWait（单击事件导致新的页面进行加载） css=input.lobtn<br>close 关闭</p>
-<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><h4 id="四种模式"><a href="#四种模式" class="headerlink" title="四种模式"></a>四种模式</h4><ol>
-<li>Assert 失败时，该测试终止</li>
-<li>verify 失败时，测试继续进行，将错误记入</li>
-<li>waitfor用于等待某些条件为变为真。可用于AJAX应用程序的测试，如果该条件为真，他们将立即成功执行，不为真时，则失败，暂停测试，直至超过当前所设定的超时时间，一般与timeout一起用</li>
-<li>store定义变量，可以获取页面相关的元素进行判断<h4 id="五种手段"><a href="#五种手段" class="headerlink" title="五种手段"></a>五种手段</h4></li>
-<li>Title获取页面标题</li>
-<li>Value获取元素的值</li>
-<li>Text获取元素文本信息</li>
-<li>Table获得元素标签</li>
-<li>ElementPresent获得当前元素</li>
-</ol>
-<p>断言常用的有（需要设置的断言鼠标右键–Show All Available Commands）<br>Command Target Value<br>assertTitle 百度一下<br>(验证标题是不是百度一下，如果不是，终止)<br>verifyTitle 百度一下<br>(验证标题是不是百度一下，如果不是，继续执行)</p>
-<h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>  转义字符 print(“C:HYPERLINK “\\python37”\python37”)双斜杠意思为在C盘下的python37文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my name is &#39;Jack&#39; and &quot;you&quot;</span><br><span class="line">print(&quot;my name is \&#39;Jack\&#39; and \&quot;you\&quot;&quot;)</span><br></pre></td></tr></table></figure>
-<p>通过“\”转义出原来的字符</p>
-<ol>
-<li><p>数组定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;[&#39;Jack&#39;,&#39;Rose&#39;,&#39;Ben&#39;,&#39;Ella&#39;]</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
-<li><p>访问数组元素<br><code>print(student[0])</code></p>
-</li>
-<li><p>-1访问最后一个元素<br><code>print(student[-1])</code></p>
-</li>
-<li><p>数组元素的添加与修改</p>
-</li>
-<li><p>末尾追加元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;[&quot;jack&quot;,&quot;rose&quot;,&quot;ann&quot;,&quot;ben&quot;]</span><br><span class="line">student.append(&#39;mike&#39;)</span><br></pre></td></tr></table></figure></li>
-<li><p>指定位置添加元素<br><code>student.insert(0,&quot;hello&quot;)</code></p>
-</li>
-<li><p>修改元素<br>`student[1]=”Jack”</p>
-</li>
-<li><p>删除末尾元素<br><code>student.pop()</code></p>
-</li>
-<li><p>删除指定元素(第四个)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student.pop(3)</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>元组（Tuple）</p>
-</li>
-</ol>
-<p>元组与数组类似，不同之处在于元组的元素一旦定义就不能修改。数组使用【】，元组使用（）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">course&#x3D;(&quot;Chinese&quot;,&quot;Math&quot;,&quot;English&quot;,&quot;History&quot;)</span><br><span class="line">print(course)</span><br><span class="line">print(course[0])</span><br><span class="line">print(course[1:3])</span><br><span class="line">print(course[1:]) &#x2F;&#x2F;显示索引1之后全部元素</span><br><span class="line">print(course[:2])</span><br></pre></td></tr></table></figure>
-<ol start="11">
-<li><p>元组的个数<br><code>print(len(course))</code></p>
-</li>
-<li><p>要定义只有一个元素的元组需要在元素后面加一个逗号，用来消除数学歧义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t&#x3D;(1,)</span><br><span class="line">print(t)</span><br></pre></td></tr></table></figure></li>
-<li><p>返回元组最大值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">score&#x3D;(78,59,86,95,100)</span><br><span class="line">print(max(score))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字典（Dictionary）</p>
-</li>
-</ol>
-<ul>
-<li>字典是另一种可变容器模型，而且可以存储任意类型对象。字典的每一个键值（key=&gt;value）对用冒号（:）分割，每个对之间用逗号(,)分割，整个字典包括在花括号｛｝中<br>d={key1 :value1,key2 :value2,key3 :value3}<br>键必须是唯一的，但值则不必。值可以取任何数据类型，但键必须是不可变的。</li>
-<li>定义访问字典<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;&#123;1:&quot;Jack&quot;,2:&quot;Mike&quot;,3:&quot;Mike&quot;,4:&quot;Anna&quot;&#125;</span><br><span class="line">print(student[2])</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="15">
-<li>添加元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student[5]&#x3D;&quot;Rose&quot;</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
-<li>修改元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student[2]&#x3D;&quot;Marry&quot;</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
-<li>删除字典<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del student[1]</span><br><span class="line">student.clear()</span><br></pre></td></tr></table></figure></li>
-<li>del student<br><code>print(student)</code></li>
-</ol>
-
+              <h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><p>open 打开网址 Target<br>click 点击 Target(id=kw ) （定位要点击的ID）<br>type 输入内容 Target (id=kw ) Value (要输入的内容)<br>click Target（id=su）<br>refresh 刷新 没有参数<br>goBack 返回<br>pause 暂停 Target(5000)单位为毫秒<br>windowMaximize 窗口最大化<br>select模拟人工单击下拉列表框 value(里面填定位到的值) label(里面填真实的值)<br>例：select Target name=CookieDate Value label=留一天<br>  clickAndWait（单击事件导致新的页面进行加载） css=input.lobtn<br>close 关闭</p>
              
           </div>
         </div>
       <div class="post-footer">
+        
+        <div class="readmore"><a href="/article/20200805.html">阅读全文 »</a></div>   
         
     </div>
     
@@ -256,7 +212,7 @@
                 <span title="发表于 2020.07.24"><i class="far fa-calendar-alt"></i> 2020.07.24</span>
               </div>
               <div class="post-meta-item updated">
-                <span title="更新于 2020.11.08"><i class="far fa-calendar-check"></i> 2020.11.08</span>
+                <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
               </div>
              
              
@@ -273,20 +229,14 @@
         </div>
           <div class="content">
             
-                  <h3 id="Oracle数据库导入备份文件"><a href="#Oracle数据库导入备份文件" class="headerlink" title="Oracle数据库导入备份文件"></a>Oracle数据库导入备份文件</h3><ul>
-<li>以sys用户登录名为Test01 的数据库<br><code>sqlplus sys/sys@Test01 as sysdba;</code></li>
-<li>删除其中的用户<br><code>drop user leo cascade;</code></li>
-<li>创建用户<br><code>CREATE USER &quot;LEO&quot; PROFILE &quot;DEFAULT&quot; IDENTIFIED BY &quot;leo&quot; DEFAULT TABLESPACE &quot;USERS&quot; TEMPORARY TABLESPACE &quot;TEMP&quot; ACCOUNT UNLOCK;</code></li>
-<li>连接权限给用户<br><code>GRANT &quot;CONNECT&quot; TO &quot;LEO&quot;;</code>    </li>
-<li>授予管理员权限<br><code>GRANT &quot;DBA&quot; TO &quot;LEO&quot;</code>    </li>
-<li>退出<br><code>exit;</code></li>
-<li>导入数据库备份文件<br><code>impdp leo/leo@Test01 directory=dump_dir dumpfile=ORACLEDATE2020.DMP schemas=leo</code><br>  dump_dir为备份文件存放路径<br>  ORACLEDATE2020.DMP为备份文件名<br>  <img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2020/07/23/8rLL.jpg" alt=""></li>
-</ul>
-
+              <h3 id="Oracle数据库导入备份文件"><a href="#Oracle数据库导入备份文件" class="headerlink" title="Oracle数据库导入备份文件"></a>Oracle数据库导入备份文件</h3><ul>
+<li>以sys用户登录名为Test01 的数据库<br><code>sqlplus sys/sys@Test01 as sysdba;</code>
              
           </div>
         </div>
       <div class="post-footer">
+        
+        <div class="readmore"><a href="/article/20200724.html">阅读全文 »</a></div>   
         
     </div>
     
@@ -301,7 +251,7 @@
                 <span title="发表于 2020.07.23"><i class="far fa-calendar-alt"></i> 2020.07.23</span>
               </div>
               <div class="post-meta-item updated">
-                <span title="更新于 2020.11.08"><i class="far fa-calendar-check"></i> 2020.11.08</span>
+                <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
               </div>
              
              
@@ -318,43 +268,13 @@
         </div>
           <div class="content">
             
-                  <h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>要加粗的文字左右分别用两个星号包起来<br>要倾斜的文字左右分别用一个星号包起来<br>要倾斜和加粗的文字左右分别用三个星号包起来<br>要加删除线的文字左右分别用两个波浪号~包起来</p>
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。<br>注：标准语法一般在#后跟个空格再写文字</p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>三个或者三个以上的 - 或者 * 都可以。</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https:&#x2F;&#x2F;i.niupic.com&#x2F;images&#x2F;2020&#x2F;07&#x2F;23&#x2F;8rLL.jpg)</span><br></pre></td></tr></table></figure>
-
-<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[超链接名](超链接地址 &quot;超链接title&quot;)</span><br></pre></td></tr></table></figure>
-<p><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a><br><a href="http://github.com" target="_blank" rel="noopener">Github</a></p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h5 id="无序列表用-任何一种都可以"><a href="#无序列表用-任何一种都可以" class="headerlink" title="无序列表用 - + * 任何一种都可以"></a>无序列表用 - + * 任何一种都可以</h5><ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<h5 id="有序列表-数字加点-序号跟内容之间要有空格"><a href="#有序列表-数字加点-序号跟内容之间要有空格" class="headerlink" title="有序列表 数字加点(序号跟内容之间要有空格)"></a>有序列表 数字加点(序号跟内容之间要有空格)</h5><ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容</li>
-</ol>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>前后用一个<code>(反引号)包住</code>Range(“姓名”).Offset(ofs, 0) = name<code>前后用三个</code>(反引号)包住</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">     echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+              <h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>要加粗的文字左右分别用两个星号包起来<br>要倾斜的文字左右分别用一个星号包起来<br>要倾斜和加粗的文字左右分别用三个星号包起来<br>要加删除线的文字左右分别用两个波浪号~包起来</p>
              
           </div>
         </div>
       <div class="post-footer">
+        
+        <div class="readmore"><a href="/article/20200723.html">阅读全文 »</a></div>   
         
     </div>
     
@@ -369,7 +289,7 @@
                 <span title="发表于 2020.07.22"><i class="far fa-calendar-alt"></i> 2020.07.22</span>
               </div>
               <div class="post-meta-item updated">
-                <span title="更新于 2020.11.08"><i class="far fa-calendar-check"></i> 2020.11.08</span>
+                <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
               </div>
              
              
@@ -386,17 +306,17 @@
         </div>
           <div class="content">
             
-                  <ul>
+              <ul>
 <li>Window  SHIFT ALT    F</li>
 <li>Mac     SHIFT Option F</li>
 <li>Ubuntu  Ctrl  Shift  I</li>
 </ul>
-<p>ESLint<br>Vetur<br>Prettier</p>
-
              
           </div>
         </div>
       <div class="post-footer">
+        
+        <div class="readmore"><a href="/article/20200722.html">阅读全文 »</a></div>   
         
     </div>
     
@@ -423,10 +343,8 @@
     
 <div id="bottom-outer">
     <div id="bottom-inner">
-        © 2020 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
-        <br>
-        Powered by 
-        <a href="http://hexo.io" target="_blank" rel="noopener">hexo</a> | Theme is <a href="https://github.com/a2396837/hexo-theme-blank/" target="_blank" rel="noopener">blank</a>
+        © 2020 <i class="fa fa-heart" id="heart"></i> Sk8erBoi | Powered by 
+        <a href="http://hexo.io" target="_blank" rel="noopener">hexo</a> 
         
     </div>  
   </div>
@@ -443,6 +361,16 @@
 
  
 
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
 
 
   <script>
@@ -481,55 +409,6 @@
 
 
 
-  
-<div id="QPlayer">
-	<div id="pContent">
-		<div id="player">
-			<span class="cover"></span>
-			<div class="ctrl">
-				<div class="musicTag marquee">
-					<strong>Title</strong>
-					 <span> - </span>
-					<span class="artist">Artist</span>
-				</div>
-				<div class="progress">
-					<div class="timer left">0:00</div>
-					<div class="contr">
-						<div class="rewind icon"></div>
-						<div class="playback icon"></div>
-						<div class="fastforward icon"></div>
-					</div>
-					<div class="right">
-						<div class="liebiao icon"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ssBtn">
-				<div class="adf"><i class="fas fa-music" style="color: #Fff;"></i></div>
-		</div>
-	</div>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/audio.css">
-	<ol id="playlist"></ol>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
-<script>
-	var playlist = [];
-	
-	var isRotate = true;
-	var autoplay = false;
-  </script>
-<script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/player.js"></script>
-<script>
-  function bgChange(){
-	var lis= $('.lib');
-	for(var i=0; i<lis.length; i+=2)
-	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
-  }
-  window.onload = bgChange;
-</script>
-
-  
 
 
   <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>

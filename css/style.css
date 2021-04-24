@@ -10,6 +10,7 @@
   --meta: #bbb;
   --cpyr: #fff;
 }
+/* layout  url(../img/bg.svg) no-repeat top center;  */
 body {
   position: relative;
   min-height: 100%;

@@ -2,23 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.leavel.cn/article/20201108.html</loc>
+    <loc>https://www.leavel.cn/tags/index.html</loc>
     
-    <lastmod>2021-04-23</lastmod>
+    <lastmod>2021-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.leavel.cn/article/20210418.html</loc>
+    <loc>https://www.leavel.cn/categories/index.html</loc>
     
-    <lastmod>2021-04-23</lastmod>
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20200724.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20201108.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20200805.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
     
   </url>
   
   <url>
     <loc>https://www.leavel.cn/article/20201107.html</loc>
     
-    <lastmod>2021-04-23</lastmod>
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20200722.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20210128.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20200723.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20200823.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.leavel.cn/article/20210418.html</loc>
+    
+    <lastmod>2021-04-24</lastmod>
     
   </url>
   
@@ -26,48 +82,6 @@
     <loc>https://www.leavel.cn/about/index.html</loc>
     
     <lastmod>2021-04-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20210128.html</loc>
-    
-    <lastmod>2021-01-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20200724.html</loc>
-    
-    <lastmod>2020-11-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20200723.html</loc>
-    
-    <lastmod>2020-11-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20200722.html</loc>
-    
-    <lastmod>2020-11-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20200823.html</loc>
-    
-    <lastmod>2020-11-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/article/20200805.html</loc>
-    
-    <lastmod>2020-08-05</lastmod>
     
   </url>
   
@@ -95,6 +109,13 @@
   </url>
   
   <url>
+    <loc>https://www.leavel.cn/tags/Oracle/</loc>
+    <lastmod>2021-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.leavel.cn/tags/Markdown/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
@@ -103,13 +124,6 @@
   
   <url>
     <loc>https://www.leavel.cn/tags/VSCode/</loc>
-    <lastmod>2021-04-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.leavel.cn/tags/Oracle/</loc>
     <lastmod>2021-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

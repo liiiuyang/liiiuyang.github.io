@@ -19,12 +19,12 @@
   
   
   
-    <link rel="alternate" href="/atom.xml " title="装修中。。。" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
   
 
   
 
-  <title>C#面试题 | 装修中。。。</title>
+  <title>C#面试题 | Sk8erBoi的笔记</title>
 
   
 
@@ -60,7 +60,7 @@
 <div class="nav index" style="height: 60px;">
     <div class="title animated fadeInDown">
         <div class="layui-container">
-                <div class="nav-title"><a href="/" title="装修中。。。">装修中。。。</a></div>
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
             <div class="nav-list">
                 <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
                 <ul class="layui-nav" lay-filter="">
@@ -92,6 +92,17 @@
                         
                         
                     <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
                         <a href="/about/ ">
                             <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
                             <span class="layui-nav-item-name">关于</span>
@@ -111,11 +122,16 @@
 <header class="header">
         
             <div class="logo">
-                    <a href="/"><img src="https://i.niupic.com/images/2020/12/04/94m3.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+                    <a href="/"><img src="https://i.niupic.com/images/2021/04/24/9gKe.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
             </div>
          
     </div>
      
+
+            <div class="motto">
+                <span>Stay hungry, stay foolish!</span>
+            </div>
+    
     
             <div class="social">
                 
@@ -173,14 +189,16 @@
 
   
   <div class="content">
-        <div><h4 id="override与重载（overload）的区别"><a href="#override与重载（overload）的区别" class="headerlink" title="override与重载（overload）的区别"></a>override与重载（overload）的区别</h4><p>1.重载是方法的名称相同。参数或参数类型不同，进行多次重载以适应不同的需要。重载（overload）是面向过程的概念。<br>2.Override 是进行基类中函数的重写。Override是面向对象的概念</p>
+        <div><h4 id="override-与重载（overload）的区别"><a href="#override-与重载（overload）的区别" class="headerlink" title="override 与重载（overload）的区别"></a>override 与重载（overload）的区别</h4><p>1.重载是方法的名称相同。参数或参数类型不同，进行多次重载以适应不同的需要。重载（overload）是面向过程的概念。<br>2.Override 是进行基类中函数的重写。Override 是面向对象的概念</p>
+<a id="more"></a>
+
 <h4 id="C-中值类型与引用类型"><a href="#C-中值类型与引用类型" class="headerlink" title="C#中值类型与引用类型"></a>C#中值类型与引用类型</h4><p>1.值类型：struct、enum、int、float、char、bool、decimal 引用类型：class、delegate、interface、array、object、string</p>
-<h4 id="C-中类-class-与结构-struct-的异同"><a href="#C-中类-class-与结构-struct-的异同" class="headerlink" title="C#中类(class)与结构(struct)的异同"></a>C#中类(class)与结构(struct)的异同</h4><p>1.class可以被实例化,属于引用类型, class可以实现接口和单继承其他类,还可以作为基类型,是分配在内存的堆上的 struct属于值类型,不能作为基类型,但是可以实现接口,是分配在内存的栈上的.</p>
-<h4 id="C-中参数传递-ref-与-out-的区别"><a href="#C-中参数传递-ref-与-out-的区别" class="headerlink" title="C#中参数传递 ref 与 out 的区别"></a>C#中参数传递 ref 与 out 的区别</h4><p>1.ref指定的参数在函数调用时必须先初始化，而out不用<br>2.out指定的参数在进入函数时会清空自己，因此必须在函数内部进行初始化赋值操作，而ref不用 总结：ref可以把值传到方法里，也可以把值传到方法外；out只可以把值传到方法外 注意：string作为特殊的引用类型，其操作是与值类型看齐的，若要将方法内对形参赋值后的结果传递出来，需要加上ref或out关键字。</p>
-<h4 id="C-中static关键字的作用"><a href="#C-中static关键字的作用" class="headerlink" title="C# 中static关键字的作用"></a>C# 中static关键字的作用</h4><p>对类有意义的字段和方法使用static关键字修饰，称为静态成员，通过类名加访问操作符“.”进行访问; 对类的实例有意义的字段和方法不加static关键字，称为非静态成员或实例成员。 注: 静态字段在内存中只有一个拷贝，非静态字段则是在每个实例对象中拥有一个拷贝。而方法无论是否为静态，在内存中只会有一份拷贝，区别只是通过类名来访问还是通过实例名来访问。</p>
-<h4 id="字符串中string-str-null和string-str-””和string-str-string-Empty的区别"><a href="#字符串中string-str-null和string-str-””和string-str-string-Empty的区别" class="headerlink" title="字符串中string str=null和string str=””和string str=string.Empty的区别"></a>字符串中string str=null和string str=””和string str=string.Empty的区别</h4><p>string.Empty相当于“”,Empty是一个静态只读的字段。 string str=”” ,初始化对象，并分配一个空字符串的内存空间 string str=null,初始化对象，不会分配内存空间</p>
-<h4 id="const和readonly的区别"><a href="#const和readonly的区别" class="headerlink" title="const和readonly的区别"></a>const和readonly的区别</h4><p>都可以标识一个常量。主要有以下区别： 1、初始化位置不同。const必须在声明的同时赋值；readonly即可以在声明处赋值; 2、修饰对象不同。const即可以修饰类的字段，也可以修饰局部变量；readonly只能修饰类的字段 3、const是编译时常量，在编译时确定该值；readonly是运行时常量，在运行时确定该值。 4、const默认是静态的；而readonly如果设置成静态需要显示声明 5、修饰引用类型时不同，const只能修饰string或值为null的其他引用类型；readonly可以是任何类型。</p>
-<h4 id="i-和-i的区别"><a href="#i-和-i的区别" class="headerlink" title="i++和++i的区别"></a>i++和++i的区别</h4><p>1.i++是先赋值，然后再自增；++i是先自增，后赋值。 2.i=0，i++=0，++i=1； Console.WriteLine(++i==i++); 结果位true</p>
+<h4 id="C-中类-class-与结构-struct-的异同"><a href="#C-中类-class-与结构-struct-的异同" class="headerlink" title="C#中类(class)与结构(struct)的异同"></a>C#中类(class)与结构(struct)的异同</h4><p>1.class 可以被实例化,属于引用类型, class 可以实现接口和单继承其他类,还可以作为基类型,是分配在内存的堆上的 struct 属于值类型,不能作为基类型,但是可以实现接口,是分配在内存的栈上的.</p>
+<h4 id="C-中参数传递-ref-与-out-的区别"><a href="#C-中参数传递-ref-与-out-的区别" class="headerlink" title="C#中参数传递 ref 与 out 的区别"></a>C#中参数传递 ref 与 out 的区别</h4><p>1.ref 指定的参数在函数调用时必须先初始化，而 out 不用<br>2.out 指定的参数在进入函数时会清空自己，因此必须在函数内部进行初始化赋值操作，而 ref 不用 总结：ref 可以把值传到方法里，也可以把值传到方法外；out 只可以把值传到方法外 注意：string 作为特殊的引用类型，其操作是与值类型看齐的，若要将方法内对形参赋值后的结果传递出来，需要加上 ref 或 out 关键字。</p>
+<h4 id="C-中-static-关键字的作用"><a href="#C-中-static-关键字的作用" class="headerlink" title="C# 中 static 关键字的作用"></a>C# 中 static 关键字的作用</h4><p>对类有意义的字段和方法使用 static 关键字修饰，称为静态成员，通过类名加访问操作符“.”进行访问; 对类的实例有意义的字段和方法不加 static 关键字，称为非静态成员或实例成员。 注: 静态字段在内存中只有一个拷贝，非静态字段则是在每个实例对象中拥有一个拷贝。而方法无论是否为静态，在内存中只会有一份拷贝，区别只是通过类名来访问还是通过实例名来访问。</p>
+<h4 id="字符串中-string-str-null-和-string-str-””和-string-str-string-Empty-的区别"><a href="#字符串中-string-str-null-和-string-str-””和-string-str-string-Empty-的区别" class="headerlink" title="字符串中 string str=null 和 string str=””和 string str=string.Empty 的区别"></a>字符串中 string str=null 和 string str=””和 string str=string.Empty 的区别</h4><p>string.Empty 相当于“”,Empty 是一个静态只读的字段。 string str=”” ,初始化对象，并分配一个空字符串的内存空间 string str=null,初始化对象，不会分配内存空间</p>
+<h4 id="const-和-readonly-的区别"><a href="#const-和-readonly-的区别" class="headerlink" title="const 和 readonly 的区别"></a>const 和 readonly 的区别</h4><p>都可以标识一个常量。主要有以下区别： 1、初始化位置不同。const 必须在声明的同时赋值；readonly 即可以在声明处赋值; 2、修饰对象不同。const 即可以修饰类的字段，也可以修饰局部变量；readonly 只能修饰类的字段 3、const 是编译时常量，在编译时确定该值；readonly 是运行时常量，在运行时确定该值。 4、const 默认是静态的；而 readonly 如果设置成静态需要显示声明 5、修饰引用类型时不同，const 只能修饰 string 或值为 null 的其他引用类型；readonly 可以是任何类型。</p>
+<h4 id="i-和-i-的区别"><a href="#i-和-i-的区别" class="headerlink" title="i++和++i 的区别"></a>i++和++i 的区别</h4><p>1.i++是先赋值，然后再自增；++i 是先自增，后赋值。 2.i=0，i++=0，++i=1； Console.WriteLine(++i==i++); 结果位 true</p>
 <h4 id="C-成员修饰符"><a href="#C-成员修饰符" class="headerlink" title="C#成员修饰符"></a>C#成员修饰符</h4><p>abstract:指示该方法或属性没有实现。</p>
 <p>const:指定域或局部变量的值不能被改动。</p>
 <p>event:声明一个事件。</p>
@@ -189,27 +207,31 @@
 <p>readonly:指示一个域只能在声明时以及相同类的内部被赋值。</p>
 <p>static:指示一个成员属于类型本身,而不是属于特定的对象。</p>
 <p>virtual:指示一个方法或存取器的实现可以在继承类中被覆盖。</p>
-<h4 id="ADO-NET常用对象"><a href="#ADO-NET常用对象" class="headerlink" title="ADO.NET常用对象"></a>ADO.NET常用对象</h4><p>Connection：主要是开启程序和数据库之间的连接。没有利用连接对象将数据库打开，是无法从数据库中取得数据的。Close和Dispose的区别，Close以后还可以Open，Dispose以后则不能再用。</p>
-<p>Command：主要可以用来对数据库发出一些指令，例如可以对数据库下达查询、新增、修改、删除数据等指令，以及调用存在数据库中的存储过程等。这个对象是架构在Connection 对象上，也就是Command： 对象是通过在Connection对象连接到数据源。</p>
-<p>DataAdapter：主要是在数据源以及DataSet 之间执行数据传输的工作，它可以透过Command 对象下达命令后，并将取得的数据放入DataSet 对象中。这个对象是架构在Command对象上，并提供了许多配合DataSet 使用的功能。</p>
-<p>DataSet：这个对象可以视为一个暂存区（Cache），可以把从数据库中所查询到的数据保留起来，甚至可以将整个数据库显示出来，DataSet是放在内存中的。DataSet 的能力不只是可以储存多个Table 而已，还可以透过DataAdapter对象取得一些例如主键等的数据表结构，并可以记录数据表间的关联。DataSet 对象可以说是<a href="http://ADO.NET" target="_blank" rel="noopener">http://ADO.NET</a> 中重量级的对象，这个对象架构在DataAdapter对象上，本身不具备和数据源沟通的能力；也就是说我们是将DataAdapter对象当做DataSet 对象以及数据源间传输数据的桥梁。DataSet包含若干DataTable、DataTableTable包含若干DataRow。</p>
-<p>DataReader：当我们只需要循序的读取数据而不需要其它操作时，可以使用DataReader 对象。DataReader对象只是一次一次向下循序的读取数据源中的数据，这些数据是存在数据库服务器中的，而不是一次性加载到程序的内存中的，只能（通过游标）读取当前行的数据，而且这些数据是只读的，并不允许作其它的操作。因为DataReader 在读取数据的时候限制了每次只读取一条，而且只能只读，所以使用起来不但节省资源而且效率很好。使用DataReader 对象除了效率较好之外，因为不用把数据全部传回，故可以降低网络的负载。</p>
+<h4 id="ADO-NET-常用对象"><a href="#ADO-NET-常用对象" class="headerlink" title="ADO.NET 常用对象"></a>ADO.NET 常用对象</h4><p>Connection：主要是开启程序和数据库之间的连接。没有利用连接对象将数据库打开，是无法从数据库中取得数据的。Close 和 Dispose 的区别，Close 以后还可以 Open，Dispose 以后则不能再用。</p>
+<p>Command：主要可以用来对数据库发出一些指令，例如可以对数据库下达查询、新增、修改、删除数据等指令，以及调用存在数据库中的存储过程等。这个对象是架构在 Connection 对象上，也就是 Command： 对象是通过在 Connection 对象连接到数据源。</p>
+<p>DataAdapter：主要是在数据源以及 DataSet 之间执行数据传输的工作，它可以透过 Command 对象下达命令后，并将取得的数据放入 DataSet 对象中。这个对象是架构在 Command 对象上，并提供了许多配合 DataSet 使用的功能。</p>
+<p>DataSet：这个对象可以视为一个暂存区（Cache），可以把从数据库中所查询到的数据保留起来，甚至可以将整个数据库显示出来，DataSet 是放在内存中的。DataSet 的能力不只是可以储存多个 Table 而已，还可以透过 DataAdapter 对象取得一些例如主键等的数据表结构，并可以记录数据表间的关联。DataSet 对象可以说是<a href="http://ADO.NET" target="_blank" rel="noopener">http://ADO.NET</a> 中重量级的对象，这个对象架构在 DataAdapter 对象上，本身不具备和数据源沟通的能力；也就是说我们是将 DataAdapter 对象当做 DataSet 对象以及数据源间传输数据的桥梁。DataSet 包含若干 DataTable、DataTableTable 包含若干 DataRow。</p>
+<p>DataReader：当我们只需要循序的读取数据而不需要其它操作时，可以使用 DataReader 对象。DataReader 对象只是一次一次向下循序的读取数据源中的数据，这些数据是存在数据库服务器中的，而不是一次性加载到程序的内存中的，只能（通过游标）读取当前行的数据，而且这些数据是只读的，并不允许作其它的操作。因为 DataReader 在读取数据的时候限制了每次只读取一条，而且只能只读，所以使用起来不但节省资源而且效率很好。使用 DataReader 对象除了效率较好之外，因为不用把数据全部传回，故可以降低网络的负载。</p>
 <h4 id="数字格式化转换"><a href="#数字格式化转换" class="headerlink" title="数字格式化转换"></a>数字格式化转换</h4><p>可使用“0”和“#”占位符进行补位。“0” 表示位数不够位数就补充“0”，小数部分如果位数多了则会四舍五入；“#”表示占位，用于辅助“0”进行补位。如下例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; “0”描述：占位符，如果可能，填充位</span><br><span class="line"> Console.WriteLine(string.Format(&quot;&#123;0:000000&#125;&quot;, 1234)); &#x2F;&#x2F; 结果：001234 </span><br><span class="line">&#x2F;&#x2F; “#”描述：占位符，如果可能，填充位</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:######&#125;&quot;, 1234));  &#x2F;&#x2F; 结果：1234</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#0####&#125;&quot;, 1234));  &#x2F;&#x2F; 结果：01234</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0#0####&#125;&quot;, 1234)); &#x2F;&#x2F; 结果：0001234 </span><br><span class="line">&#x2F;&#x2F; &quot;.&quot;描述：小数点</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:000.000&#125;&quot;, 1234));       &#x2F;&#x2F; 结果：1234.000</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:000.000&#125;&quot;, 4321.12543)); &#x2F;&#x2F; 结果：4321.125</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; &quot;,&quot;描述：千分表示</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0,0&#125;&quot;, 1234567));   &#x2F;&#x2F;结果：1,234,567</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; &quot;%&quot;描述：格式化为百分数</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0%&#125;&quot;, 1234));        &#x2F;&#x2F; 结果：123400%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#%&#125;&quot;, 1234.125));   &#x2F;&#x2F; 结果：123413%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0.00%&#125;&quot;, 1234));     &#x2F;&#x2F; 结果：123400.00%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#.00%&#125;&quot;, 1234.125)); &#x2F;&#x2F; 结果：123412.50%</span><br><span class="line">内置快捷字母格式化用法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; E-科学计数法表示</span><br><span class="line">Console.WriteLine((25000).ToString(&quot;E&quot;)); &#x2F;&#x2F; 结果：2.500000E+004</span><br><span class="line">&#x2F;&#x2F; C-货币表示，带有逗号分隔符，默认小数点后保留两位，四舍五入</span><br><span class="line">Console.WriteLine((2.5).ToString(&quot;C&quot;)); &#x2F;&#x2F; 结果：￥2.50</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; D[length]-十进制数</span><br><span class="line">Console.WriteLine((25).ToString(&quot;D5&quot;)); &#x2F;&#x2F; 结果：00025</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; F[precision]-浮点数，保留小数位数(四舍五入)</span><br><span class="line">Console.WriteLine((25).ToString(&quot;F2&quot;)); &#x2F;&#x2F; 结果：25.00</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; G[digits]-常规，保留指定位数的有效数字，四舍五入</span><br><span class="line">Console.WriteLine((2.52).ToString(&quot;G2&quot;)); &#x2F;&#x2F; 结果：2.5</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; N-带有逗号分隔符，默认小数点后保留两位，四舍五入</span><br><span class="line">Console.WriteLine((2500000).ToString(&quot;N&quot;)); &#x2F;&#x2F; 结果：2,500,000.00</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; X-十六进制，非整型将产生格式异常</span><br><span class="line">Console.WriteLine((255).ToString(&quot;X&quot;)); &#x2F;&#x2F; 结果</span><br><span class="line">ToString 也可以自定义补零格式化：</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line">Console.WriteLine((15).ToString(&quot;000&quot;));              &#x2F;&#x2F; 结果：015</span><br><span class="line">Console.WriteLine((15).ToString(&quot;value is 0&quot;));       &#x2F;&#x2F; 结果：value is 15</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;0.00&quot;));         &#x2F;&#x2F; 结果：10.46</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;00&quot;));           &#x2F;&#x2F; 结果：10</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;value is 0.0&quot;)); &#x2F;&#x2F; 结果：value is 10.5</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; “0”描述：占位符，如果可能，填充位</span><br><span class="line"> Console.WriteLine(string.Format(&quot;&#123;0:000000&#125;&quot;, 1234)); &#x2F;&#x2F; 结果：001234</span><br><span class="line">&#x2F;&#x2F; “#”描述：占位符，如果可能，填充位</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:######&#125;&quot;, 1234));  &#x2F;&#x2F; 结果：1234</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#0####&#125;&quot;, 1234));  &#x2F;&#x2F; 结果：01234</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0#0####&#125;&quot;, 1234)); &#x2F;&#x2F; 结果：0001234</span><br><span class="line">&#x2F;&#x2F; &quot;.&quot;描述：小数点</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:000.000&#125;&quot;, 1234));       &#x2F;&#x2F; 结果：1234.000</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:000.000&#125;&quot;, 4321.12543)); &#x2F;&#x2F; 结果：4321.125</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; &quot;,&quot;描述：千分表示</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0,0&#125;&quot;, 1234567));   &#x2F;&#x2F;结果：1,234,567</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; &quot;%&quot;描述：格式化为百分数</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0%&#125;&quot;, 1234));        &#x2F;&#x2F; 结果：123400%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#%&#125;&quot;, 1234.125));   &#x2F;&#x2F; 结果：123413%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:0.00%&#125;&quot;, 1234));     &#x2F;&#x2F; 结果：123400.00%</span><br><span class="line">Console.WriteLine(string.Format(&quot;&#123;0:#.00%&#125;&quot;, 1234.125)); &#x2F;&#x2F; 结果：123412.50%</span><br><span class="line">内置快捷字母格式化用法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; E-科学计数法表示</span><br><span class="line">Console.WriteLine((25000).ToString(&quot;E&quot;)); &#x2F;&#x2F; 结果：2.500000E+004</span><br><span class="line">&#x2F;&#x2F; C-货币表示，带有逗号分隔符，默认小数点后保留两位，四舍五入</span><br><span class="line">Console.WriteLine((2.5).ToString(&quot;C&quot;)); &#x2F;&#x2F; 结果：￥2.50</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; D[length]-十进制数</span><br><span class="line">Console.WriteLine((25).ToString(&quot;D5&quot;)); &#x2F;&#x2F; 结果：00025</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; F[precision]-浮点数，保留小数位数(四舍五入)</span><br><span class="line">Console.WriteLine((25).ToString(&quot;F2&quot;)); &#x2F;&#x2F; 结果：25.00</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; G[digits]-常规，保留指定位数的有效数字，四舍五入</span><br><span class="line">Console.WriteLine((2.52).ToString(&quot;G2&quot;)); &#x2F;&#x2F; 结果：2.5</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; N-带有逗号分隔符，默认小数点后保留两位，四舍五入</span><br><span class="line">Console.WriteLine((2500000).ToString(&quot;N&quot;)); &#x2F;&#x2F; 结果：2,500,000.00</span><br><span class="line">​</span><br><span class="line">&#x2F;&#x2F; X-十六进制，非整型将产生格式异常</span><br><span class="line">Console.WriteLine((255).ToString(&quot;X&quot;)); &#x2F;&#x2F; 结果</span><br><span class="line">ToString 也可以自定义补零格式化：</span><br><span class="line"></span><br><span class="line">​</span><br><span class="line">Console.WriteLine((15).ToString(&quot;000&quot;));              &#x2F;&#x2F; 结果：015</span><br><span class="line">Console.WriteLine((15).ToString(&quot;value is 0&quot;));       &#x2F;&#x2F; 结果：value is 15</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;0.00&quot;));         &#x2F;&#x2F; 结果：10.46</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;00&quot;));           &#x2F;&#x2F; 结果：10</span><br><span class="line">Console.WriteLine((10.456).ToString(&quot;value is 0.0&quot;)); &#x2F;&#x2F; 结果：value is 10.5</span><br></pre></td></tr></table></figure>
 
 <h4 id="字符串拼接、字符串内插法"><a href="#字符串拼接、字符串内插法" class="headerlink" title="字符串拼接、字符串内插法"></a>字符串拼接、字符串内插法</h4><p>将数组中的字符串拼接成一个字符串：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var parts &#x3D; new[] &#123; &quot;Foo&quot;, &quot;Bar&quot;, &quot;Fizz&quot;, &quot;Buzz&quot;&#125;;</span><br><span class="line">var joined &#x3D; string.Join(&quot;, &quot;, parts);</span><br><span class="line">&#x2F;&#x2F; joined &#x3D; &quot;Foo, Bar, Fizz, Buzz&quot;</span><br></pre></td></tr></table></figure>
+
 <p>以下四种方式都可以达到相同的字符串拼接的目的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">string first &#x3D; &quot;Hello&quot;;</span><br><span class="line">stringsecond &#x3D; &quot;World&quot;;</span><br><span class="line">string foo &#x3D; first + &quot; &quot; + second;</span><br><span class="line">string foo &#x3D; string.Concat(first, &quot; &quot;, second);</span><br><span class="line">string foo &#x3D; string.Format(&quot;&#123;0&#125; &#123;1&#125;&quot;, firstname, lastname);</span><br><span class="line">string foo &#x3D; $&quot;&#123;firstname&#125; &#123;lastname&#125;&quot;;</span><br></pre></td></tr></table></figure>
+
 <p>字符串内插法简单用法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var name &#x3D; &quot;World&quot;;</span><br><span class="line">var str &#x3D;$&quot;Hello, &#123;name&#125;!&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;Hello, World!&quot;</span><br></pre></td></tr></table></figure>
+
 <p>带日期格式化</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var date &#x3D; DateTime.Now;</span><br><span class="line">var str &#x3D; $&quot;Today is &#123;date:yyyy-MM-dd&#125;！&quot;;</span><br></pre></td></tr></table></figure>
 
 <p>补齐格式化（Padding）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var number &#x3D; 42; </span><br><span class="line">&#x2F;&#x2F; 向左补齐</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is &#123;number,5&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is ___42.&quot; (&#39;_&#39;表示空格) </span><br><span class="line">&#x2F;&#x2F; 向右补齐</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is $&#123;number,-5&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is 42___.&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var number &#x3D; 42;</span><br><span class="line">&#x2F;&#x2F; 向左补齐</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is &#123;number,5&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is ___42.&quot; (&#39;_&#39;表示空格)</span><br><span class="line">&#x2F;&#x2F; 向右补齐</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is $&#123;number,-5&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is 42___.&quot;</span><br></pre></td></tr></table></figure>
+
 <p>结合内置快捷字母格式化：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var amount &#x3D; 2.5;</span><br><span class="line">var str &#x3D; $&quot;It costs &#123;amount:C&#125;&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;￥2.50&quot; </span><br><span class="line">var number &#x3D; 42;</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is &#123;number,5:f1&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is ___42.1&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var amount &#x3D; 2.5;</span><br><span class="line">var str &#x3D; $&quot;It costs &#123;amount:C&#125;&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;￥2.50&quot;</span><br><span class="line">var number &#x3D; 42;</span><br><span class="line">var str &#x3D; $&quot;The answer to life, the universe and everything is &#123;number,5:f1&#125;.&quot;;</span><br><span class="line">&#x2F;&#x2F; str &#x3D; &quot;The answer to life, the universe and everything is ___42.1&quot;</span><br></pre></td></tr></table></figure>
 </div>
         
           <div class="post-copyright">
@@ -270,10 +292,8 @@
     
 <div id="bottom-outer">
     <div id="bottom-inner">
-        © 2020 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
-        <br>
-        Powered by 
-        <a href="http://hexo.io" target="_blank" rel="noopener">hexo</a> | Theme is <a href="https://github.com/a2396837/hexo-theme-blank/" target="_blank" rel="noopener">blank</a>
+        © 2020 <i class="fa fa-heart" id="heart"></i> Sk8erBoi | Powered by 
+        <a href="http://hexo.io" target="_blank" rel="noopener">hexo</a> 
         
     </div>  
   </div>
@@ -290,6 +310,16 @@
 
  
 
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
 
 
   <script>
@@ -328,55 +358,6 @@
 
 
 
-  
-<div id="QPlayer">
-	<div id="pContent">
-		<div id="player">
-			<span class="cover"></span>
-			<div class="ctrl">
-				<div class="musicTag marquee">
-					<strong>Title</strong>
-					 <span> - </span>
-					<span class="artist">Artist</span>
-				</div>
-				<div class="progress">
-					<div class="timer left">0:00</div>
-					<div class="contr">
-						<div class="rewind icon"></div>
-						<div class="playback icon"></div>
-						<div class="fastforward icon"></div>
-					</div>
-					<div class="right">
-						<div class="liebiao icon"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ssBtn">
-				<div class="adf"><i class="fas fa-music" style="color: #Fff;"></i></div>
-		</div>
-	</div>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/audio.css">
-	<ol id="playlist"></ol>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js"></script>
-<script>
-	var playlist = [];
-	
-	var isRotate = true;
-	var autoplay = false;
-  </script>
-<script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/player.js"></script>
-<script>
-  function bgChange(){
-	var lis= $('.lib');
-	for(var i=0; i<lis.length; i+=2)
-	lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
-  }
-  window.onload = bgChange;
-</script>
-
-  
 
 
   <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
