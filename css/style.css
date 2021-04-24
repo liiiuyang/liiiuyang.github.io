@@ -10,11 +10,11 @@
   --meta: #bbb;
   --cpyr: #fff;
 }
-/* layout  url(../img/bg.svg) no-repeat top center;  */
+/* layout  url(../img/bg.svg) no-repeat top center;  var(--bg); */
 body {
   position: relative;
   min-height: 100%;
-  background: var(--bg);
+  background: url("../img/bg.svg") no-repeat top center;
   font-size: 16px;
   font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-tap-highlight-color: transparent;
