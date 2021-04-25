@@ -5,7 +5,7 @@
   --code: #476582;
   --codebg: rgba(27,31,35,0.05);
   --bg: #fff;
-  --navbg: #fff;
+  --navbg: #dededc;
   --item: #000;
   --meta: #bbb;
   --cpyr: #fff;
@@ -14,7 +14,7 @@
 body {
   position: relative;
   min-height: 100%;
-  background: url("../img/bg.svg") no-repeat top center;
+  background: #dededc url("../img/bg.svg") no-repeat top center;
   font-size: 16px;
   font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-tap-highlight-color: transparent;
