@@ -24,7 +24,7 @@
 
   
 
-  <title>Path.Combine方法的用法 | Sk8erBoi的笔记</title>
+  <title>C# Path.Combine方法代码示例 | Sk8erBoi的笔记</title>
 
   
 
@@ -144,7 +144,7 @@
 
     
 <article id="post">
-  <div class="post-title">Path.Combine方法的用法</div>
+  <div class="post-title">C# Path.Combine方法代码示例</div>
   
 <div class="post-meta">
     
@@ -153,14 +153,14 @@
         <span title="发表于 2021.01.28"><i class="far fa-calendar-alt"></i> 2021.01.28</span>
       </div>
       <div class="post-meta-item updated">
-        <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
+        <span title="更新于 2021.04.25"><i class="far fa-calendar-check"></i> 2021.04.25</span>
       </div>
      
      
     
      <div class="post-meta-item wordcount">
         
-          <i class="fas fa-pencil-alt"></i> <span class="post-count">248 字</span>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">122 字</span>
            
         
           <i class="far fa-clock"></i> <span class="post-count">1 分钟</span>
@@ -172,10 +172,8 @@
 
   
   <div class="content">
-        <div><h2 id="C-Path-Combine-方法的用法"><a href="#C-Path-Combine-方法的用法" class="headerlink" title="C# Path.Combine 方法的用法"></a>C# Path.Combine 方法的用法</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> s1 = Path.Combine(<span class="string">"D:"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">string</span> s2 = Path.Combine(<span class="string">"D:\\"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\file.txt</span></span><br><span class="line"><span class="keyword">string</span> s3 = Path.Combine(<span class="string">"D:\\dir"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\dir\file.txt</span></span><br><span class="line"><span class="keyword">string</span> s4 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\dir\file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">string</span> s5 = Path.Combine(<span class="string">"D:"</span>, <span class="string">"/file.txt"</span>); <span class="comment">// /file.txt</span></span><br><span class="line"><span class="keyword">string</span> s6 = Path.Combine(<span class="string">"D:\\"</span>, <span class="string">"\\file.txt"</span>); <span class="comment">// \file.txt</span></span><br><span class="line"><span class="keyword">string</span> s7 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"/file.txt"</span>); <span class="comment">// /file.txt</span></span><br><span class="line"><span class="keyword">string</span> s8 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"\\file.txt"</span>); <span class="comment">// \file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fileDir = <span class="string">"C:\\Windows"</span>;</span><br><span class="line"><span class="keyword">var</span> fileDir2 = <span class="string">"C:\Windows"</span>; <span class="comment">//编译器直接报错</span></span><br><span class="line"><span class="keyword">var</span> fileName = <span class="string">"file.txt"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> filePath1= Path.Combine(<span class="string">@"C:\Windows"</span>, fileName);</span><br><span class="line"><span class="comment">// sendDir、fileName不能为空</span></span><br><span class="line"><span class="keyword">var</span> filePath2 = Path.Combine(fileDir, fileName);</span><br><span class="line"><span class="keyword">if</span> (File.Exists(filePath1))</span><br><span class="line">&#123;</span><br><span class="line">	File.Delete(filePath);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a> 
-<h2 id="DataTable的操作"><a href="#DataTable的操作" class="headerlink" title="DataTable的操作"></a>DataTable的操作</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> stuName = <span class="string">""</span>;<span class="comment">// X</span></span><br><span class="line"><span class="keyword">string</span> stuName = <span class="keyword">string</span>.Empty;<span class="comment">// √</span></span><br><span class="line">stuName.Equals(<span class="string">"Tom"</span>);<span class="comment">// √</span></span><br><span class="line"><span class="keyword">string</span>.IsNullOrEmpty(stuName);<span class="comment">// √</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 过滤 DataTable 中的数据</span></span><br><span class="line"><span class="keyword">var</span> filter = <span class="keyword">string</span>.Format(<span class="string">"ID = &#123;0&#125; AND STUNAME &lt;&gt; '&#123;1&#125;' AND AGE = &#123;2&#125; AND SEX IS NOT NULL"</span>, id, stuName, <span class="number">12</span>);</span><br><span class="line"><span class="keyword">var</span> stuRow = stuTable.Select(filter);</span><br><span class="line"><span class="comment">// 存在数据</span></span><br><span class="line"><span class="keyword">if</span> (stuRow.Length &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 克隆表结构</span></span><br><span class="line">	<span class="keyword">var</span> itemStuTable = stuTable.Clone();</span><br><span class="line">	<span class="comment">// 遍历过滤出的数据</span></span><br><span class="line">	<span class="keyword">foreach</span>(DataRow row <span class="keyword">in</span> stuRow )</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="comment">// 添加数据到新表中</span></span><br><span class="line">		itemStuTable.ImportRow(row);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果SchoolObject这个DataSet不存在这个表</span></span><br><span class="line"><span class="keyword">if</span>(!SchoolObject.Tables.Contains(TableNames.stuTable))</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div>
+        <div><h4 id="C-Path-Combine"><a href="#C-Path-Combine" class="headerlink" title="C# Path.Combine"></a>C# Path.Combine</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> s1 = Path.Combine(<span class="string">"D:"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">string</span> s2 = Path.Combine(<span class="string">"D:\\"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\file.txt</span></span><br><span class="line"><span class="keyword">string</span> s3 = Path.Combine(<span class="string">"D:\\dir"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\dir\file.txt</span></span><br><span class="line"><span class="keyword">string</span> s4 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"file.txt"</span>); <span class="comment">// D:\dir\file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">string</span> s5 = Path.Combine(<span class="string">"D:"</span>, <span class="string">"/file.txt"</span>); <span class="comment">// /file.txt</span></span><br><span class="line"><span class="keyword">string</span> s6 = Path.Combine(<span class="string">"D:\\"</span>, <span class="string">"\\file.txt"</span>); <span class="comment">// \file.txt</span></span><br><span class="line"><span class="keyword">string</span> s7 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"/file.txt"</span>); <span class="comment">// /file.txt</span></span><br><span class="line"><span class="keyword">string</span> s8 = Path.Combine(<span class="string">"D:\\dir\\"</span>, <span class="string">"\\file.txt"</span>); <span class="comment">// \file.txt</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fileDir = <span class="string">"C:\\Windows"</span>;</span><br><span class="line"><span class="keyword">var</span> fileDir2 = <span class="string">"C:\Windows"</span>; <span class="comment">//编译器直接报错</span></span><br><span class="line"><span class="keyword">var</span> fileName = <span class="string">"file.txt"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> filePath1= Path.Combine(<span class="string">@"C:\Windows"</span>, fileName);</span><br><span class="line"><span class="comment">// sendDir、fileName不能为空</span></span><br><span class="line"><span class="keyword">var</span> filePath2 = Path.Combine(fileDir, fileName);</span><br><span class="line"><span class="keyword">if</span> (File.Exists(filePath1))</span><br><span class="line">&#123;</span><br><span class="line">	File.Delete(filePath);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a></div>
         
           <div class="post-copyright">
                   <div class="copyright-item">
@@ -199,12 +197,12 @@
     <div class="post-nav">
       
         <div class="post-nav-prev post-nav-item">
-            <a href="/article/20210418.html" >C#面试题<i class="fa fa-chevron-left"></i></a>
+            <a href="/article/20210418.html" >C#面试题整理<i class="fa fa-chevron-left"></i></a>
         </div>
       
       
         <div class="post-nav-next post-nav-item">
-            <a href="/article/20201108.html" >Array.Sort 方法<i class="fa fa-chevron-right"></i></a>
+            <a href="/article/20201108.html" >C#常用的排序方法<i class="fa fa-chevron-right"></i></a>
         </div>
       
     </div>
