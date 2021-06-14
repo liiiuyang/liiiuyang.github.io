@@ -22,7 +22,7 @@
 
   
 
-  <title>标签 | Sk8erBoi的笔记</title>
+  <title>随便记记01 | Sk8erBoi的笔记</title>
 
   
 
@@ -141,33 +141,79 @@
 </header>
 
     
-<article class="post-wrap page">
-    <h1 class="pagetitle">标签</h1>
-    <section class="content">
+<article id="post">
+  <div class="post-title">随便记记01</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="发表于 2021.06.14"><i class="far fa-calendar-alt"></i> 2021.06.14</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2021.06.14"><i class="far fa-calendar-check"></i> 2021.06.14</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
         
-            
-<div class="tags-cloud">		
-  <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/WPF/" style="font-size: 15px;">WPF</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 10px;">排序</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a>
-  </div>
-  <script type="text/javascript">
-    var list = document.querySelectorAll('.tags-cloud a');
-    Array.prototype.forEach.call(list, (item, index) => {
-      item.style.fontSize = Math.floor(Math.random() * 29 + 12) + 'px';//12 ~ 40
-      item.style.color = 'rgb(' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ')';// 0,0,0 -> 200,200,200
-    });
-  </script>
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">174 字</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">1 分钟</span>
+                               
+      </div>
+     
+</div>
 
+
+  
+  <div class="content">
+        <div><p>当打开组合框的下拉列表时发生。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">private int comboxIndex &#x3D; -1;</span><br><span class="line">private void DropDown(object sender, System.EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; 获取第一次combobox中的值的索引</span><br><span class="line">	comboxIndex &#x3D; cbSMPINFX03.SelectedIndex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a> 
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private void ComboBox_SelectionChanged(Object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">	if(cbValue.Equals(1))</span><br><span class="line">	&#123;</span><br><span class="line">		&#x2F;&#x2F; 如果选中不符合条件的项目，恢复到默认</span><br><span class="line">		ErrorMessageBox.Show(msg);</span><br><span class="line">		cbValue.SelectedIndex &#x3D; comboxIndex;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private readonly string[]  _requestColumns &#x3D; </span><br><span class="line">&#123;</span><br><span class="line">	ColumnNames.A, ColumnNames.B, ColumnNames.C, ColumnNames.D</span><br><span class="line">&#125;;</span><br><span class="line">var columnValueList &#x3D; new List&lt;string&gt;();</span><br><span class="line">var dataRow &#x3D; Table.Rows[0];</span><br><span class="line">foreach(var requestColumn in _requestColumns)</span><br><span class="line">&#123;</span><br><span class="line">	var columnValue  &#x3D; dataRow[requestColumn].ToString();</span><br><span class="line">    if (!string.IsNullOrEmpty(columnValue))</span><br><span class="line">    &#123;</span><br><span class="line">     	columnValueList.Add(columnValue);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foreach (var item in collection)</span><br><span class="line">&#123;</span><br><span class="line">	if (item &#x3D;&#x3D; &quot;A&quot;)</span><br><span class="line">	&#123;	&#x2F;&#x2F; 跳出循环</span><br><span class="line">		continue;</span><br><span class="line">	&#125;</span><br><span class="line">	if (item &#x3D;&#x3D; &quot;B&quot; )</span><br><span class="line">	&#123;</span><br><span class="line">	&#x2F;&#x2F;  ToDo...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
         
-     </section>
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Sk8erBoi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://www.leavel.cn/article/20210614.html">https://www.leavel.cn/article/20210614.html</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外,转载请注明出处！</span>
+                  </div>
+          </div>
         
+  </div>
+
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/C/" class="tag">C#</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/WPF/" class="tag">WPF</a>
+      
+    </div>
+    <div class="post-nav">
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/article/20210418.html" >C#面试题整理<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
 
 
 
 
 </article>
-
-
-
 
     
 <a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
