@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="Sk8erBoi">
+  
+  
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
+  
+
+  
+
+  <title>自动化测试 | Sk8erBoi的笔记</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+    <script src="/js/todark.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">首页</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">归档</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about/ ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">关于</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/link/ ">
+                            <i class=" fab fa-weixin " style="color: hsl(152deg 73% 45%);"></i>
+                            <span class="layui-nav-item-name">联系</span>
+                        </a>
+                    </li>
+                    
+                    
+                        <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="/img/abc.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+
+            <div class="motto">
+                <span>做时间的朋友😭</span>
+            </div>
+    
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">自动化测试</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="发表于 2020.08.05"><i class="far fa-calendar-alt"></i> 2020.08.05</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2021.04.24"><i class="far fa-calendar-check"></i> 2021.04.24</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">845 字</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">3 分钟</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><p>open 打开网址 Target<br>click 点击 Target(id=kw ) （定位要点击的ID）<br>type 输入内容 Target (id=kw ) Value (要输入的内容)<br>click Target（id=su）<br>refresh 刷新 没有参数<br>goBack 返回<br>pause 暂停 Target(5000)单位为毫秒<br>windowMaximize 窗口最大化<br>select模拟人工单击下拉列表框 value(里面填定位到的值) label(里面填真实的值)<br>例：select Target name=CookieDate Value label=留一天<br>  clickAndWait（单击事件导致新的页面进行加载） css=input.lobtn<br>close 关闭</p>
+<a id="more"></a> 
+<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><h4 id="四种模式"><a href="#四种模式" class="headerlink" title="四种模式"></a>四种模式</h4><ol>
+<li>Assert 失败时，该测试终止</li>
+<li>verify 失败时，测试继续进行，将错误记入</li>
+<li>waitfor用于等待某些条件为变为真。可用于AJAX应用程序的测试，如果该条件为真，他们将立即成功执行，不为真时，则失败，暂停测试，直至超过当前所设定的超时时间，一般与timeout一起用</li>
+<li>store定义变量，可以获取页面相关的元素进行判断<h4 id="五种手段"><a href="#五种手段" class="headerlink" title="五种手段"></a>五种手段</h4></li>
+<li>Title获取页面标题</li>
+<li>Value获取元素的值</li>
+<li>Text获取元素文本信息</li>
+<li>Table获得元素标签</li>
+<li>ElementPresent获得当前元素</li>
+</ol>
+<p>断言常用的有（需要设置的断言鼠标右键–Show All Available Commands）<br>Command Target Value<br>assertTitle 百度一下<br>(验证标题是不是百度一下，如果不是，终止)<br>verifyTitle 百度一下<br>(验证标题是不是百度一下，如果不是，继续执行)</p>
+<h2 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h2><p>  转义字符 print(“C:HYPERLINK “\\python37”\python37”)双斜杠意思为在C盘下的python37文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my name is &#39;Jack&#39; and &quot;you&quot;</span><br><span class="line">print(&quot;my name is \&#39;Jack\&#39; and \&quot;you\&quot;&quot;)</span><br></pre></td></tr></table></figure>
+<p>通过“\”转义出原来的字符</p>
+<ol>
+<li><p>数组定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;[&#39;Jack&#39;,&#39;Rose&#39;,&#39;Ben&#39;,&#39;Ella&#39;]</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
+<li><p>访问数组元素<br><code>print(student[0])</code></p>
+</li>
+<li><p>-1访问最后一个元素<br><code>print(student[-1])</code></p>
+</li>
+<li><p>数组元素的添加与修改</p>
+</li>
+<li><p>末尾追加元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;[&quot;jack&quot;,&quot;rose&quot;,&quot;ann&quot;,&quot;ben&quot;]</span><br><span class="line">student.append(&#39;mike&#39;)</span><br></pre></td></tr></table></figure></li>
+<li><p>指定位置添加元素<br><code>student.insert(0,&quot;hello&quot;)</code></p>
+</li>
+<li><p>修改元素<br>`student[1]=”Jack”</p>
+</li>
+<li><p>删除末尾元素<br><code>student.pop()</code></p>
+</li>
+<li><p>删除指定元素(第四个)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student.pop(3)</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元组（Tuple）</p>
+</li>
+</ol>
+<p>元组与数组类似，不同之处在于元组的元素一旦定义就不能修改。数组使用【】，元组使用（）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">course&#x3D;(&quot;Chinese&quot;,&quot;Math&quot;,&quot;English&quot;,&quot;History&quot;)</span><br><span class="line">print(course)</span><br><span class="line">print(course[0])</span><br><span class="line">print(course[1:3])</span><br><span class="line">print(course[1:]) &#x2F;&#x2F;显示索引1之后全部元素</span><br><span class="line">print(course[:2])</span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li><p>元组的个数<br><code>print(len(course))</code></p>
+</li>
+<li><p>要定义只有一个元素的元组需要在元素后面加一个逗号，用来消除数学歧义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t&#x3D;(1,)</span><br><span class="line">print(t)</span><br></pre></td></tr></table></figure></li>
+<li><p>返回元组最大值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">score&#x3D;(78,59,86,95,100)</span><br><span class="line">print(max(score))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典（Dictionary）</p>
+</li>
+</ol>
+<ul>
+<li>字典是另一种可变容器模型，而且可以存储任意类型对象。字典的每一个键值（key=&gt;value）对用冒号（:）分割，每个对之间用逗号(,)分割，整个字典包括在花括号｛｝中<br>d={key1 :value1,key2 :value2,key3 :value3}<br>键必须是唯一的，但值则不必。值可以取任何数据类型，但键必须是不可变的。</li>
+<li>定义访问字典<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student&#x3D;&#123;1:&quot;Jack&quot;,2:&quot;Mike&quot;,3:&quot;Mike&quot;,4:&quot;Anna&quot;&#125;</span><br><span class="line">print(student[2])</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="15">
+<li>添加元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student[5]&#x3D;&quot;Rose&quot;</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
+<li>修改元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">student[2]&#x3D;&quot;Marry&quot;</span><br><span class="line">print(student)</span><br></pre></td></tr></table></figure></li>
+<li>删除字典<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">del student[1]</span><br><span class="line">student.clear()</span><br></pre></td></tr></table></figure></li>
+<li>del student<br><code>print(student)</code></li>
+</ol>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Sk8erBoi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://www.leavel.cn/article/20200805.html">https://www.leavel.cn/article/20200805.html</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外,转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/Python/" class="tag">Python</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/%E6%B5%8B%E8%AF%95/" class="tag">测试</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/article/20200823.html" >C#获取ListBox里的数据<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/article/20200724.html" >Oracle数据库导入备份<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    <div id="bottom-outer">
+  <div id="bottom-inner">
+      © 2022 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
+      <br>
+      Powered by hexo | Theme is blank
+      
+  </div>  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+</html>

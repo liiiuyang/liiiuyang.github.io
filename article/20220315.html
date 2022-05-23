@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="Sk8erBoi">
+  
+  
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
+  
+
+  
+
+  <title>软件测试面试题目 | Sk8erBoi的笔记</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+    <script src="/js/todark.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">首页</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">归档</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about/ ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">关于</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/link/ ">
+                            <i class=" fab fa-weixin " style="color: hsl(152deg 73% 45%);"></i>
+                            <span class="layui-nav-item-name">联系</span>
+                        </a>
+                    </li>
+                    
+                    
+                        <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="/img/abc.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+
+            <div class="motto">
+                <span>做时间的朋友😭</span>
+            </div>
+    
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">软件测试面试题目</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="发表于 2022.03.15"><i class="far fa-calendar-alt"></i> 2022.03.15</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2022.03.15"><i class="far fa-calendar-check"></i> 2022.03.15</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">657 字</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">2 分钟</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><p><strong>简单记一下：</strong><br><strong>测试流程有哪些：</strong><br>1.需求评审<br>2.测试计划<br>3.编写测试用例</p>
+<a id="more"></a> 
+<p>4.测试用例评审<br>5.系统测试<br>6.生成测试报告</p>
+<p><strong>测试用例的七个方法</strong></p>
+<p>1.基于需求的设计方法<br>依据看客户需求设计测试用例<br>2.等价类<br>依据需求将输入划分为若干等价类，从等价类中选定一个测试用例，如果该测试用例通过，则表明整个等价类通过测试。<br>3.边界值<br>边界值法是对输入数据的边界测试，是一种黑盒测试方法；一般来说边界值法是对等价类划分后的补充<br>4.因果图<br>因果图是一种简化的逻辑图，能够表示输入条件和输出结果之间的关系。<br>5.错误猜测法<br>错误猜测法是基于经验和直觉推测程序中所有可能存在的各种错误，从而有针对性的设计测试用例。列举出程序中所有可能有的错误和容易发生错误的特殊情况,根据他们选择测试用例。<br>6.场景设计法<br>目前的大多数软件的事件触发来控制流程的，我们可通过想象事件触发时的情景形成流程，依据同一事件不同的触发顺序和结果形成事件流，再依据事件流设计测试用例。<br>一般场景设计法与需求设计法结合使用，能够将多个孤立的功能联系在一起<br>7.正交排列</p>
+<p><strong>自动化测试</strong><br><strong>八大元素定位</strong><br>find_element_by_name()<br>find_element_by_id()<br>find_element_by_class_name()<br>find_element_by_tag_name()<br>find_element_by_link_text()<br>find_element_by_partial_link_text()<br>find_element_by_xpath()<br>find_element_by_css_selector()</p>
+<p>模拟键盘操作定位<br><a href="https://www.cnblogs.com/dcszhangsir/p/13566819.html" target="_blank" rel="noopener">selenium模拟键盘操作大全 - 多测师张sir - 博客园 (cnblogs.com)</a></p>
+<p><strong>动态元素如何定位</strong><br>xpath定位<br>①//input[@name=’account’]</p>
+<p>②//*[@name=’accout’]</p>
+<p>③ 定位下拉框 //li//span[text()=’男’]</p>
+<p>④ (//li//span[text()=’在职’])[1] 选第一个</p>
+<p>⑤//li//span[text()=’在职’]/a[last()] 选最后一个</p>
+<p>⑥//li//span[text()=’在职’]/a[last()-1] 选倒数第二个</p>
+<p><strong>常见的异常解决手段</strong><br>1.元素没有找到（定位错误，没有添加等待，iframe未切换）<br>2.元素无法正常交互（页面是否最大化，是否需要滚动条，是否需要悬停）<br>3.超时（显示等待超时因为元素有误，窗体最大化超时）<br>4.创建session失败（检查浏览器版本与driver是否匹配）</p>
+<p><strong>http协议状态码：</strong><br>1xx 请求成功，继续处理<br>2xx 请求发送成功<br>3xx 重定向<br>4xx 客户端错误<br>5xx 服务端错误</p>
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Sk8erBoi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://www.leavel.cn/article/20220315.html">https://www.leavel.cn/article/20220315.html</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外,转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="tag">软件测试</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/article/20220502.html" >Linux压测环境搭建（Jmeter）及压测<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/article/20220220.html" >Python + Selenium自动化测试练习<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    <div id="bottom-outer">
+  <div id="bottom-inner">
+      © 2022 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
+      <br>
+      Powered by hexo | Theme is blank
+      
+  </div>  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+</html>

@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="Sk8erBoi">
+  
+  
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
+  
+
+  
+
+  <title>C#获取ListBox里的数据 | Sk8erBoi的笔记</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+    <script src="/js/todark.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">首页</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">归档</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about/ ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">关于</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/link/ ">
+                            <i class=" fab fa-weixin " style="color: hsl(152deg 73% 45%);"></i>
+                            <span class="layui-nav-item-name">联系</span>
+                        </a>
+                    </li>
+                    
+                    
+                        <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="/img/abc.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+
+            <div class="motto">
+                <span>做时间的朋友😭</span>
+            </div>
+    
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">C#获取ListBox里的数据</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="发表于 2020.08.23"><i class="far fa-calendar-alt"></i> 2020.08.23</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2021.04.25"><i class="far fa-calendar-check"></i> 2021.04.25</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">378 字</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">2 分钟</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><h3 id="C-获取ListBox里的数据"><a href="#C-获取ListBox里的数据" class="headerlink" title="C#获取ListBox里的数据"></a>C#获取ListBox里的数据</h3> <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;<span class="keyword">string</span>&gt; SelectedFileNames</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">get</span></span><br><span class="line">	&#123;</span><br><span class="line">		List&lt;<span class="keyword">string</span>&gt; temp = <span class="keyword">new</span> List&lt;<span class="keyword">string</span>&gt;();</span><br><span class="line">			<span class="keyword">foreach</span> (<span class="keyword">var</span> item <span class="keyword">in</span> listBox.SelectedItems)</span><br><span class="line">			&#123;</span><br><span class="line">				temp.Add(item.ToString());</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="comment">//排序</span></span><br><span class="line">			temp.Sort()</span><br><span class="line">			<span class="keyword">return</span> temp;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h3 id="DataTable的操作"><a href="#DataTable的操作" class="headerlink" title="DataTable的操作"></a>DataTable的操作</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> stuName = <span class="string">""</span>;<span class="comment">// X</span></span><br><span class="line"><span class="keyword">string</span> stuName = <span class="keyword">string</span>.Empty;<span class="comment">// √</span></span><br><span class="line">stuName.Equals(<span class="string">"Tom"</span>);<span class="comment">// √</span></span><br><span class="line"><span class="keyword">string</span>.IsNullOrEmpty(stuName);<span class="comment">// √</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 过滤 DataTable 中的数据</span></span><br><span class="line"><span class="keyword">var</span> filter = <span class="keyword">string</span>.Format(<span class="string">"ID = &#123;0&#125; AND STUNAME &lt;&gt; '&#123;1&#125;' AND AGE = &#123;2&#125; AND SEX IS NOT NULL"</span>, id, stuName, <span class="number">12</span>);</span><br><span class="line"><span class="keyword">var</span> stuRow = stuTable.Select(filter);</span><br><span class="line"><span class="comment">// 存在数据</span></span><br><span class="line"><span class="keyword">if</span> (stuRow.Length &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// 克隆表结构</span></span><br><span class="line">	<span class="keyword">var</span> itemStuTable = stuTable.Clone();</span><br><span class="line">	<span class="comment">// 遍历过滤出的数据</span></span><br><span class="line">	<span class="keyword">foreach</span>(DataRow row <span class="keyword">in</span> stuRow )</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="comment">// 添加数据到新表中</span></span><br><span class="line">		itemStuTable.ImportRow(row);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果SchoolObject这个DataSet不存在这个表</span></span><br><span class="line"><span class="keyword">if</span>(!SchoolObject.Tables.Contains(TableNames.stuTable))</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="调用Command，获取userid"><a href="#调用Command，获取userid" class="headerlink" title="调用Command，获取userid"></a>调用Command，获取userid</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getUserNameCommand = <span class="keyword">new</span> GetUserNameCommand();</span><br><span class="line">getUserNameCommand.SetUser(userid);</span><br><span class="line"><span class="keyword">var</span> result = Context.Current.ExecuteUICommand(getUserNameCommand);</span><br><span class="line"><span class="keyword">var</span> userTable = result.Value.Tables[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">string</span> userid = userTable.Rows[<span class="number">0</span>][ColumnNames.USERID].ToString();</span><br></pre></td></tr></table></figure>
+<h3 id="Command内容"><a href="#Command内容" class="headerlink" title="Command内容"></a>Command内容</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">GetUserNameCommand</span> : <span class="title">ApiCommand</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">const</span> <span class="keyword">string</span> NAME = <span class="string">"GetUserName"</span>;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">GetUserNameCommand</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">	: <span class="title">base</span>(<span class="params">NAME</span>)</span></span><br><span class="line"><span class="function"></span>	&#123;</span><br><span class="line">		Component = CommonAPI;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 取得したいユーザIDを設定</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="userid"&gt;</span>ユーザID/param&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetUser</span>(<span class="params"><span class="keyword">string</span> userid</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ArgumentUtil.SetValue(Argument, ColumnNames.USERID, userid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">foreach</span> (DataRow rows <span class="keyword">in</span> tstList.Rows)</span><br><span class="line"><span class="keyword">foreach</span> (DataRowView rowView <span class="keyword">in</span> ttstRows)</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> row <span class="keyword">in</span> e.Rows.Select(rowView =&gt; rowView.Row))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">dat0 = GetInf(data01, data02, data03, data04, <span class="literal">false</span>);</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="data01"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="data02"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="data03"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="data04"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="multiFlag"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">GetInf</span>(<span class="params"><span class="keyword">string</span> data01, <span class="keyword">string</span> data02, <span class="keyword">string</span> data03, <span class="keyword">string</span> data04, <span class="keyword">bool</span> multiFlag</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;<span class="keyword">decimal</span>&gt; <span class="title">GetUserInf</span>(<span class="params">ListEventArgs e</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> DataTable <span class="title">GetUserInf</span>(<span class="params">IList&lt;DataRowView&gt; ttstRows</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">string</span> <span class="title">GetUserInf</span>(<span class="params"><span class="keyword">string</span> data01, <span class="keyword">string</span> data02, <span class="keyword">string</span> data03, <span class="keyword">string</span> data04</span>)</span></span><br></pre></td></tr></table></figure>
+
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Sk8erBoi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://www.leavel.cn/article/20200823.html">https://www.leavel.cn/article/20200823.html</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外,转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/C/" class="tag">C#</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/WPF/" class="tag">WPF</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/article/20201107.html" >利用Hexo创建博客<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/article/20200805.html" >自动化测试<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    <div id="bottom-outer">
+  <div id="bottom-inner">
+      © 2022 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
+      <br>
+      Powered by hexo | Theme is blank
+      
+  </div>  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+</html>

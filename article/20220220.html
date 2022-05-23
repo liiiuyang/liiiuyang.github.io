@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <meta name="author" content="Sk8erBoi">
+  
+  
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Sk8erBoi的笔记" type="application/atom+xml">
+  
+
+  
+
+  <title>Python + Selenium自动化测试练习 | Sk8erBoi的笔记</title>
+
+  
+
+  
+
+  
+
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/partial/dark.css" >
+
+  
+  
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/partial/highlight/atom-one-light.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/css/iconfont.css">
+    
+  
+
+  
+    <script src="/js/todark.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+    
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container">
+                <div class="nav-title"><a href="/" title="Sk8erBoi的笔记">Sk8erBoi的笔记</a></div>
+            <div class="nav-list">
+                <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+                <ul class="layui-nav" lay-filter="">
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/ ">
+                            <i class=" fab fa-fort-awesome " style="color: rgb(255 107 107);"></i>
+                            <span class="layui-nav-item-name">首页</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/archives/ ">
+                            <i class=" fas fa-archive " style="color: rgb(10 189 227);"></i>
+                            <span class="layui-nav-item-name">归档</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/tags/ ">
+                            <i class=" fas fa-hashtag " style="color: rgb(254 202 87);"></i>
+                            <span class="layui-nav-item-name">标签</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/about/ ">
+                            <i class=" fab fa-grav " style="color: rgb(154 106 247);"></i>
+                            <span class="layui-nav-item-name">关于</span>
+                        </a>
+                    </li>
+                    
+                        
+                        
+                        
+                        
+                    <li class="layui-nav-item">
+                        <a href="/link/ ">
+                            <i class=" fab fa-weixin " style="color: hsl(152deg 73% 45%);"></i>
+                            <span class="layui-nav-item-name">联系</span>
+                        </a>
+                    </li>
+                    
+                    
+                        <li class="layui-nav-item" id="btn-toggle-dark">🌙</li>
+                    
+                    <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<header class="header">
+        
+            <div class="logo">
+                    <a href="/"><img src="/img/abc.jpg" onerror=this.onerror=null,this.src="/img/loading.gif"></a>
+            </div>
+         
+    </div>
+     
+
+            <div class="motto">
+                <span>做时间的朋友😭</span>
+            </div>
+    
+     
+</header>
+
+    
+<article id="post">
+  <div class="post-title">Python + Selenium自动化测试练习</div>
+  
+<div class="post-meta">
+    
+    
+      <div class="post-meta-item date">
+        <span title="发表于 2022.02.20"><i class="far fa-calendar-alt"></i> 2022.02.20</span>
+      </div>
+      <div class="post-meta-item updated">
+        <span title="更新于 2022.02.20"><i class="far fa-calendar-check"></i> 2022.02.20</span>
+      </div>
+     
+     
+    
+     <div class="post-meta-item wordcount">
+        
+          <i class="fas fa-pencil-alt"></i> <span class="post-count">841 字</span>
+           
+        
+          <i class="far fa-clock"></i> <span class="post-count">4 分钟</span>
+                               
+      </div>
+     
+</div>
+
+
+  
+  <div class="content">
+        <div><p> <strong>Python + Selenium自动化测试练习</strong><br> 实现的功能</p>
+<h6 id="1-登录"><a href="#1-登录" class="headerlink" title="1.登录"></a>1.登录</h6><h6 id="2-将未读信息标记为已读"><a href="#2-将未读信息标记为已读" class="headerlink" title="2.将未读信息标记为已读"></a>2.将未读信息标记为已读</h6><h6 id="3-将未处理的任务全部通过"><a href="#3-将未处理的任务全部通过" class="headerlink" title="3.将未处理的任务全部通过"></a>3.将未处理的任务全部通过</h6><a id="more"></a> 
+
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4j.png" alt="" title="1.登录"></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4k.png" alt="" title="2.标记消息"></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4l.png" alt="" title="3.双击进入任务"></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4m.png" alt="" title="4.通过任务"></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4p.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4n.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4q.png" alt=""></p>
+<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4o.png" alt=""></p>
+<p>main.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> defaultFunction</span><br><span class="line"><span class="keyword">import</span> autoMarkMsg</span><br><span class="line"><span class="keyword">import</span> autoPassTask</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置隐性等待时间（最大等待时间10s）</span></span><br><span class="line">defaultFunction.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">defaultFunction.driver.get(defaultFunction.url)</span><br><span class="line"><span class="comment"># 利用Tab键和Enter键实现登录</span></span><br><span class="line"><span class="comment"># DefaultFunction.driver.find_element(By.CSS_SELECTOR, '.login-form input[data-v-5f194660]').send_keys(user, Keys.TAB, password, Keys.ENTER)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 利用XPath定位实现登录</span></span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@placeholder="请输入手机号"]'</span>).send_keys(defaultFunction.user)</span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@placeholder="请输入密码"]'</span>).send_keys(defaultFunction.password)</span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@type="button"]'</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 标记未读消息</span></span><br><span class="line">sleep(<span class="number">2</span>)</span><br><span class="line">num_str = autoMarkMsg.autoMark(defaultFunction.driver)</span><br><span class="line">print(num_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # 通过未处理的任务</span></span><br><span class="line">pass_num_task = autoPassTask.passTask(defaultFunction.driver)</span><br><span class="line">print(pass_num_task)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待10秒后退出浏览器</span></span><br><span class="line">sleep(<span class="number">10</span>)</span><br><span class="line">defaultFunction.driver.quit()</span><br></pre></td></tr></table></figure>
+
+<p>defaultFunction.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"></span><br><span class="line">user = <span class="string">'13280xxxxxxx'</span></span><br><span class="line">password = <span class="string">'xxxxx'</span></span><br><span class="line"><span class="comment"># 开发环境</span></span><br><span class="line"><span class="comment"># url = 'http://58.56.xxxxxxxxx/#/login'</span></span><br><span class="line"><span class="comment"># 生产环境</span></span><br><span class="line">url = <span class="string">'http://59.46.xxxxxxxxxx/#/login'</span></span><br><span class="line">driver = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个函数判断是否存在某个值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isElementExist</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="string">""""判断是否存在某个值"""</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        driver.find_element(By.XPATH, s)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        e</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p>autoPassTask.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需要引入ActionChains类,里面有鼠标调用的方法</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.action_chains <span class="keyword">import</span> ActionChains</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> defaultFunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">passTask</span><span class="params">(driver)</span>:</span></span><br><span class="line">    <span class="string">"""处理未通过的任务"""</span></span><br><span class="line">    <span class="comment"># 循环</span></span><br><span class="line">    pass_num_task = <span class="string">'当前无未处理任务'</span></span><br><span class="line">    <span class="keyword">if</span> defaultFunction.isElementExist(<span class="string">'//div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div'</span>):</span><br><span class="line">        <span class="keyword">for</span> m <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">            <span class="comment"># 双击打开消息</span></span><br><span class="line">            element = driver.find_element(By.XPATH, <span class="string">'//div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div'</span>)</span><br><span class="line">            <span class="comment"># 需要睡眠</span></span><br><span class="line">            sleep(<span class="number">1</span>)</span><br><span class="line">            ActionChains(driver).double_click(element).perform()</span><br><span class="line">            sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="comment"># 循环检查打开的流程中是否还存在相关元素</span></span><br><span class="line">            <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">                <span class="comment"># 调用判断函数</span></span><br><span class="line">                is_exist = defaultFunction.isElementExist(<span class="string">'//form[2]/div[1]/div/label[2]'</span>)</span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">                <span class="comment"># 如果存在消息按钮就执行</span></span><br><span class="line">                <span class="keyword">if</span> is_exist:</span><br><span class="line">                    sleep(<span class="number">1</span>)</span><br><span class="line">                    <span class="comment"># 选中通过消息按钮</span></span><br><span class="line">                    driver.find_element(By.XPATH, <span class="string">'//form[2]/div[1]/div/label[2]'</span>).click()</span><br><span class="line">                    sleep(<span class="number">1</span>)</span><br><span class="line">                    <span class="comment"># 点击提交</span></span><br><span class="line">                    driver.find_element(By.XPATH, <span class="string">'//div[2]/form[2]/div[3]/div/button[1]/span'</span>).click()</span><br><span class="line">                    sleep(<span class="number">1</span>)</span><br><span class="line">                    <span class="comment"># 确认提交</span></span><br><span class="line">                    driver.find_element(By.XPATH, <span class="string">'//div/div[3]/button[2]/span'</span>).click()</span><br><span class="line">                    sleep(<span class="number">1</span>)</span><br><span class="line">                <span class="comment"># 如果已经没有该元素，则提前跳出循环，进入下一步</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                <span class="comment"># 循环的速度很快，如果不加等待时间容易获取不到元素报错</span></span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="comment"># 循环的速度很快，如果不加等待时间容易获取不到元素报错</span></span><br><span class="line">            sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="comment"># 点击返回按钮</span></span><br><span class="line">            driver.find_element(By.XPATH, <span class="string">'//div[2]/div[1]/button'</span>).click()</span><br><span class="line">            pass_num_task = <span class="string">f'已处理通过<span class="subst">&#123;m + <span class="number">1</span>&#125;</span>条任务'</span></span><br><span class="line">        sleep(<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">return</span> pass_num_task</span><br></pre></td></tr></table></figure>
+<p>autoMarkMsg.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> defaultFunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">autoMark</span><span class="params">(driver)</span>:</span></span><br><span class="line">    <span class="string">"""标记未读消息函数"""</span></span><br><span class="line">    <span class="comment"># 判断如果有未读消息就标记未读消息两条</span></span><br><span class="line">    num_str = <span class="string">'当前无未读消息'</span></span><br><span class="line">    <span class="keyword">if</span> defaultFunction.isElementExist(<span class="string">'//div[3]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span'</span>):</span><br><span class="line">        <span class="comment"># 循环</span></span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">10000</span>):</span><br><span class="line">            <span class="keyword">if</span> defaultFunction.isElementExist(</span><br><span class="line">                    <span class="string">'//div[3]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span'</span>):</span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">                <span class="comment"># 选中消息</span></span><br><span class="line">                driver.find_element(By.XPATH,</span><br><span class="line">                                    <span class="string">'//div[3]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span'</span>).click()</span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">                <span class="comment"># 点击已读按钮</span></span><br><span class="line">                driver.find_element(By.XPATH, <span class="string">'//div[2]/div/div[1]/div[3]/div[1]/div/button[1]/span'</span>).click()</span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">                <span class="comment"># 确定按钮</span></span><br><span class="line">                driver.find_element(By.XPATH, <span class="string">'//div[3]/div/div[3]/button[2]/span'</span>).click()</span><br><span class="line">                <span class="comment"># 循环的速度很快，如果不加等待时间容易获取不到元素报错</span></span><br><span class="line">                sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            num_str = <span class="string">f'已经标为已读<span class="subst">&#123;n + <span class="number">1</span>&#125;</span>条'</span></span><br><span class="line">        sleep(<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">return</span> num_str</span><br></pre></td></tr></table></figure>
+
+</div>
+        
+          <div class="post-copyright">
+                  <div class="copyright-item">
+                      <span> 作者: Sk8erBoi</span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 链接: <a href="https://www.leavel.cn/article/20220220.html">https://www.leavel.cn/article/20220220.html</a></span>
+                  </div>
+                  <div class="copyright-item">
+                      <span> 声明: 本博客所有文章除特别声明外,转载请注明出处！</span>
+                  </div>
+          </div>
+        
+  </div>
+
+    <div class="post_tags">
+      
+        <i class="fas fa-tag"></i> <a href="/tags/Python/" class="tag">Python</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/Selenium/" class="tag">Selenium</a>
+      
+        <i class="fas fa-tag"></i> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" class="tag">自动化测试</a>
+      
+    </div>
+    <div class="post-nav">
+      
+        <div class="post-nav-prev post-nav-item">
+            <a href="/article/20220315.html" >软件测试面试题目<i class="fa fa-chevron-left"></i></a>
+        </div>
+      
+      
+        <div class="post-nav-next post-nav-item">
+            <a href="/article/20211109.html" >随便记记03<i class="fa fa-chevron-right"></i></a>
+        </div>
+      
+    </div>
+      
+
+
+
+
+</article>
+
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    
+
+
+
+
+
+
+    <div id="bottom-outer">
+  <div id="bottom-inner">
+      © 2022 <i class="fa fa-heart" id="heart"></i> Sk8erBoi 
+      <br>
+      Powered by hexo | Theme is blank
+      
+  </div>  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.min.js"></script>
+
+
+
+  
+    <script src="/js/script.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+  
+
+ 
+
+  <script src="/js/local-search.js"></script>
+<script type="text/javascript">      
+  var search_path = "search.xml";
+if (search_path.length == 0) {
+  search_path = "search.xml";
+}
+var path = "/" + search_path;
+  searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
+  
+
+
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: 'img',
+      threshold: 0
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
+  
+
+
+  <script>
+    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
+    images.each(function (i, o) {
+      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
+      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
+    })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+  <script>
+        $().fancybox({
+      selector: '[data-fancybox]',
+      loop: true,
+      transitionEffect: 'slide',
+      protect: true,
+      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
+    })
+  </script>   
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
+<script>
+!function (e, t, a) {
+  var initCopyCode = function(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '  <i class="fa fa-clipboard"></i><span>复制</span>';
+    copyHtml += '</button>';
+    $(".highlight .code pre").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+  }
+  initCopyCode();
+}(window, document);
+</script>  
+  
+
+<script>
+  var btntop = $('#gotop');
+  btntop.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+  });
+
+  var $table = $('.content table').not($('figure.highlight > table'))
+$table.each(function () {
+  $(this).wrap('<div class="table-wrap"></div>')
+})
+</script>
+
+</html>
