@@ -216,34 +216,6 @@
 
 
 
-  <script>
-    window.lazyLoadOptions = {
-      elements_selector: 'img',
-      threshold: 0
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
-  
-
-
-  <script>
-    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
-    images.each(function (i, o) {
-      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
-      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
-    })
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
-  <script>
-        $().fancybox({
-      selector: '[data-fancybox]',
-      loop: true,
-      transitionEffect: 'slide',
-      protect: true,
-      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
-    })
-  </script>   
-  
 
 
 
@@ -254,12 +226,10 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
 
 
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
+
+
 
 
   

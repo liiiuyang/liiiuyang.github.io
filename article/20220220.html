@@ -173,14 +173,14 @@
         <div><p> <strong>Python + Selenium自动化测试练习</strong><br> 实现的功能</p>
 <h6 id="1-登录"><a href="#1-登录" class="headerlink" title="1.登录"></a>1.登录</h6><h6 id="2-将未读信息标记为已读"><a href="#2-将未读信息标记为已读" class="headerlink" title="2.将未读信息标记为已读"></a>2.将未读信息标记为已读</h6><h6 id="3-将未处理的任务全部通过"><a href="#3-将未处理的任务全部通过" class="headerlink" title="3.将未处理的任务全部通过"></a>3.将未处理的任务全部通过</h6><a id="more"></a> 
 
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4j.png" alt="" title="1.登录"></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4k.png" alt="" title="2.标记消息"></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4l.png" alt="" title="3.双击进入任务"></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4m.png" alt="" title="4.通过任务"></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4p.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4n.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4q.png" alt=""></p>
-<p><img src= "/img/loading.gif" data-src="https://i.niupic.com/images/2022/02/20/9V4o.png" alt=""></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4j.png" alt="" title="1.登录"></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4k.png" alt="" title="2.标记消息"></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4l.png" alt="" title="3.双击进入任务"></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4m.png" alt="" title="4.通过任务"></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4p.png" alt=""></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4n.png" alt=""></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4q.png" alt=""></p>
+<p><img src="https://i.niupic.com/images/2022/02/20/9V4o.png" alt=""></p>
 <p>main.py</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> selenium.webdriver.common.by <span class="keyword">import</span> By</span><br><span class="line"><span class="keyword">import</span> defaultFunction</span><br><span class="line"><span class="keyword">import</span> autoMarkMsg</span><br><span class="line"><span class="keyword">import</span> autoPassTask</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置隐性等待时间（最大等待时间10s）</span></span><br><span class="line">defaultFunction.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line">defaultFunction.driver.get(defaultFunction.url)</span><br><span class="line"><span class="comment"># 利用Tab键和Enter键实现登录</span></span><br><span class="line"><span class="comment"># DefaultFunction.driver.find_element(By.CSS_SELECTOR, '.login-form input[data-v-5f194660]').send_keys(user, Keys.TAB, password, Keys.ENTER)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 利用XPath定位实现登录</span></span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@placeholder="请输入手机号"]'</span>).send_keys(defaultFunction.user)</span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@placeholder="请输入密码"]'</span>).send_keys(defaultFunction.password)</span><br><span class="line">defaultFunction.driver.find_element(By.XPATH, <span class="string">'//*[@type="button"]'</span>).click()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 标记未读消息</span></span><br><span class="line">sleep(<span class="number">2</span>)</span><br><span class="line">num_str = autoMarkMsg.autoMark(defaultFunction.driver)</span><br><span class="line">print(num_str)</span><br><span class="line"></span><br><span class="line"><span class="comment"># # 通过未处理的任务</span></span><br><span class="line">pass_num_task = autoPassTask.passTask(defaultFunction.driver)</span><br><span class="line">print(pass_num_task)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待10秒后退出浏览器</span></span><br><span class="line">sleep(<span class="number">10</span>)</span><br><span class="line">defaultFunction.driver.quit()</span><br></pre></td></tr></table></figure>
 
@@ -267,34 +267,6 @@
 
 
 
-  <script>
-    window.lazyLoadOptions = {
-      elements_selector: 'img',
-      threshold: 0
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
-  
-
-
-  <script>
-    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
-    images.each(function (i, o) {
-      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
-      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
-    })
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
-  <script>
-        $().fancybox({
-      selector: '[data-fancybox]',
-      loop: true,
-      transitionEffect: 'slide',
-      protect: true,
-      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
-    })
-  </script>   
-  
 
 
 
@@ -305,12 +277,10 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
 
 
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
+
+
 
 
   

@@ -152,8 +152,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/wechat.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/wechat.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="/img/wechatcode.jpg" target="_blank" title="Wechat">Wechat</a></div>
                         <div class="info" title="是一个生活方式">是一个生活方式</div>
@@ -162,8 +162,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/gmail.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/gmail.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="mailto:liuyoung2008@gmail.com" target="_blank" title="E-mail">E-mail</a></div>
                         <div class="info" title="liuyoung2008@gmail.com">liuyoung2008@gmail.com</div>
@@ -172,8 +172,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/weibo.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/weibo.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="https://weibo.com/liuyangbabys" target="_blank" title="Weibo">Weibo</a></div>
                         <div class="info" title="随时随地发现新鲜事">随时随地发现新鲜事</div>
@@ -182,8 +182,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/github.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/github.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="https://github.com/liiiuyang" target="_blank" title="Github">Github</a></div>
                         <div class="info" title="Where the world builds software">Where the world builds software</div>
@@ -192,8 +192,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/netmusic.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/netmusic.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="https://music.163.com/#/user/home?id=117569915" target="_blank" title="Netmusic">Netmusic</a></div>
                         <div class="info" title="音乐你的生活">音乐你的生活</div>
@@ -202,8 +202,8 @@
                 
                     <div class="card">
                       
-                         <img class="ava" data-src="/img/bilibili.png" onerror=this.onerror=null,this.src="/img/loading.gif">
-                        
+                         <img class="ava" src="/img/bilibili.png" onerror=this.onerror=null,this.src="/img/loading.gif">
+                       
                         <div class="card-header">
                         <div><a href="https://space.bilibili.com/26197383?from=search&amp;seid=393318872648607286" target="_blank" title="Bilibili">Bilibili</a></div>
                         <div class="info" title="(゜-゜)つロ 干杯~-bilibili">(゜-゜)つロ 干杯~-bilibili</div>
@@ -258,34 +258,6 @@
 
 
 
-  <script>
-    window.lazyLoadOptions = {
-      elements_selector: 'img',
-      threshold: 0
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script>   
-  
-
-
-  <script>
-    var images = $('img').not('.nav-logo img').not('.card img').not($('a>img')).not('.reward-content img')
-    images.each(function (i, o) {
-      var lazyloadSrc = $(o).attr('data-src') ? $(o).attr('data-src') : $(o).attr('src')
-      $(o).wrap(`<a href="${lazyloadSrc}" data-fancybox="group" data-caption="${$(o).attr('alt')}" class="fancybox"></a>`)
-    })
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
-  <script>
-        $().fancybox({
-      selector: '[data-fancybox]',
-      loop: true,
-      transitionEffect: 'slide',
-      protect: true,
-      buttons: ['slideShow', 'fullScreen', 'thumbs', 'close']
-    })
-  </script>   
-  
 
 
 
@@ -296,12 +268,10 @@
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script>
-  
 
 
-  <script src="https://cdn.jsdelivr.net/gh/a2396837/CDN@latest/js/firework.js"></script>
-  
+
+
 
 
   
