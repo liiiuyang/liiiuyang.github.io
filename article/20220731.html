@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询今天是否为交易日</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.26.0/axios.js"></script>
+</head>
+<div class="root">
+    <input type="text" v-model.lazy="today">
+    <button @click="begin">开始</button>
+    <h1>{{real.a}}</h1>
+    <h2>基金列表</h2>
+    <ul>
+        <li v-for="(list,index) in foundList.data" :key="index">
+            基金代号：{{list.code}}
+            基金名称：{{list.name}}
+            基金类型：{{list.type}}
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: '.root',
+        data() {
+            return {
+                info: {
+                    code: '',
+                    msg: "",
+                    data:
+                        { isTradeDate: '' }
+                },
+                foundList: {
+                    code: '',
+                    msg: "",
+                    data: [
+                        {
+                            code: "",
+                            name: "",
+                            type: ""
+                        },
+                    ]
+                },
+                real: {
+                    a: ''
+                },
+                today: ''
+            }
+        },
+        mounted() {
+            // axios
+            //     .get('https://www.runoob.com/try/ajax/json_demo.json')
+            //     .then(response => (this.info = response))
+            //     .catch(function (error) { // 请求失败处理
+            //         console.log(error);
+            //     });
+            axios({
+                method: 'GET',
+                url: 'https://stockapi.com.cn/v1/fund/all'
+            }).then((response) => {
+                this.foundList = response.data
+            })
+        },
+        computed: {
+            isTradeDate() {
+                if (this.msg = 'success' && this.info.data.isTradeDate === 1) {
+                    this.real.a = '是'
+                }
+                if (this.msg = 'success' && this.info.data.isTradeDate === 0) {
+                    this.real.a = '否'
+                }
+            }
+        },
+        methods: {
+            begin() {
+                axios
+                    .get('https://stockapi.com.cn/v1/base/tradeDate', {
+                        params: {
+                            tradeDate: this.today
+                        }
+                    })
+                    .then((response) => {
+                        this.info = response.data
+                    })
+            }
+        }
+    })
+</script>
+
+<body>
+
+</body>
+
+</html>
