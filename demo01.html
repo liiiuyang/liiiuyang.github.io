@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo01</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h3>01小写转大写</h3>
+        <input type="text" v-model.lazy="toUP" placeholder="请输入...">
+        <h3>02列表排序</h3>
+        <button v-on:click="isSort=1">年龄升序</button>
+        <button v-on:click="isSort=2">年龄降序</button>
+        <button v-on:click="isSort=0">还原</button>
+        <ul>
+            <li v-for="(person,index) in sortPersons" :key="person.id">
+                姓名:{{person.name}}-性别:{{person.sex}}-年龄:{{person.age}}
+            </li>
+
+        </ul>
+        <h3>03搜索</h3>
+        <input type="text" name="" id="" v-model="search">
+        <ul>
+            <li v-for="(com,index) in companyResult" :key="index">{{com.name}}</li>
+        </ul>
+        <h3>04简单提交</h3>
+        <input type="text" v-model="user">
+        <input type="password" v-model="pwd">
+        <button @click="onSubmit">提交</button><br>
+        <p>{{msg}}</p>
+        <h3>05表单提交</h3>
+        <form @submit.prevent>
+            <input type="text" v-model.trim="info.title" placeholder='标题'>
+            <input type="number" v-model.number="info.tel" placeholder='手机号'>
+            是<input type="radio" v-model="info.abc" name="abc" value="true" id="">
+            否<input type="radio" v-model="info.abc" name="abc" value="false" id=""><br><br>
+
+            <input type="checkbox" v-model="info.year" value="2021年">2021年
+            <input type="checkbox" v-model="info.year" value="2022年">2022年
+            <input type="checkbox" v-model="info.year" value="2023年">2023年
+
+            <select name="" id="" v-model="info.city">
+                <option value="Beijing">北京</option>
+                <option value="Shanghai">上海</option>
+                <option value="Guangzhou">广州</option>
+                </option>
+            </select>
+            <button @click="submit">提交</button>
+        </form>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                value: '',
+                isSort: 0,
+                keyWord: '',
+                persons: [
+                    { id: 001, name: "Tom", sex: "男", age: 19 },
+                    { id: 002, name: "Jack", sex: "男", age: 15 },
+                    { id: 003, name: "Tony", sex: "男", age: 23 },
+                    { id: 004, name: "Mike", sex: "男", age: 10 },
+                ],
+                search: '',
+                company: [
+                    { name: '阿里巴巴' },
+                    { name: '腾讯视频' },
+                    { name: '爱奇艺' },
+                    { name: '哔哩哔哩' },
+                    { name: '新浪微博' },
+                    { name: '东方财富' },
+                    { name: '韦尔股份' },
+                ],
+                user: '',
+                pwd: '',
+                msg: '',
+                info:
+                {
+                    title: '',
+                    tel: '',
+                    abc: '',
+                    year: [],
+                    city: ''
+                }
+
+            },
+            methods: {
+                onSubmit() {
+                    if (this.user === 'tom' && this.pwd === '123456') {
+                        this.msg = '登录成功！'
+                    } else {
+                        this.msg = '登录失败！'
+                    }
+                },
+                submit() {
+                    alert(JSON.stringify(this.info));
+                    console.log(JSON.stringify(this.info));
+
+                }
+            },
+            computed: {
+                // 小写转大写
+                toUP: {
+                    get() {
+                        return this.value;
+                    },
+                    set(val) {
+                        this.value = val.toUpperCase();
+                    }
+                },
+                // 排序
+                sortPersons() {
+                    const arr = this.persons.filter((p) => {
+                        //this.keyWord?
+                        return p.name.indexOf(this.keyWord) !== -1
+                    })
+                    if (this.isSort) {
+                        arr.sort(
+                            (a, b) => {
+                                return this.isSort === 1 ? a.age - b.age : b.age - a.age
+                            }
+                        )
+                    };
+                    return arr
+
+                },
+                //搜索
+                companyResult() {
+                    return this.company.filter(value => {
+                        return value.name.match(this.search)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
