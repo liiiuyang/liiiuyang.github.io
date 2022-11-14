@@ -19,7 +19,8 @@
         <h5>方式二</h5>
         <input type="number" v-model.number="money" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"
             placeholder='公积金月缴存基数'>
-        <input type="number" v-model.number="year" blur="value=value.replace(/^(0+)|[^\d]+/g,'')" placeholder='贷款年限'>
+        <input type="number" v-model.number="year" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" 
+            placeholder='贷款年限'>
         <select v-model="time">
             <option value="0">连续缴纳小于半年</option>
             <option value="0.3">连续缴纳半年到一年</option>
