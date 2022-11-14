@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>济南公积金计算器</title>
+</head>
+
+<body>
+    <div id="app">
+        <h5>方式一</h5>
+        <input type="number" v-model.number="balance" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"
+            placeholder='公积金余额'>
+        <button @click="go1">计算</button>
+        <p>单人可贷款额度：{{total1}}元</p><br>
+        <h5>方式二</h5>
+        <input type="number" v-model.number="money" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')"
+            placeholder='公积金月缴存基数'>
+        <input type="number" v-model.number="year" blur="value=value.replace(/^(0+)|[^\d]+/g,'')" placeholder='贷款年限'>
+        <select v-model="time">
+            <option value="0">连续缴纳小于半年</option>
+            <option value="0.3">连续缴纳半年到一年</option>
+            <option value="0.4">连续缴纳一年到三年</option>
+            <option value="0.6">连续缴纳三年到五年</option>
+            <option value="0.8">连续缴纳五年到七年</option>
+            <option value="1">连续缴纳大于七年</option>
+        </select>
+        <button @click="go2">计算</button>
+        <p>单人可贷款额度：{{total2}}元</p><br>
+        <img src="img/info.png" width="80%" height="80%" alt="">
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            balance: '',
+            total1: '0',
+            money: '',
+            year: '',
+            time: '',
+            total2: '0',
+        }
+        , methods: {
+            go1() {
+                var tempMoney = this.balance * 15
+                if (tempMoney > 500000) {
+                    this.total1 = 500000
+                }
+                else {
+                    this.total1 = this.balance * 15
+                }
+            },
+            go2() {
+                var tempMoney = this.money * this.year * this.time * 0.6 * 12
+                if (tempMoney > 500000) {
+                    this.total2 = 500000
+                }
+                else {
+                    this.total2 = this.money * this.year * this.time * 0.6 * 12
+                }
+            }
+        }
+    })
+</script>
+
+</html>
