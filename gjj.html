@@ -52,7 +52,7 @@
                     this.total1 = 500000
                 }
                 else {
-                    this.total1 = this.balance * 15
+                    this.total1 = Math.trunc(this.balance * 15)
                 }
             },
             go2() {
@@ -61,7 +61,7 @@
                     this.total2 = 500000
                 }
                 else {
-                    this.total2 = this.money * this.year * this.time * 0.6 * 12
+                    this.total2 = Math.trunc(this.money * this.year * this.time * 0.6 * 12)
                 }
             }
         }
