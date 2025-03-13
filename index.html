@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 2 Quiz App with Element UI</title>
+  <!-- 引入 Element UI 样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入 Vue 2 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <!-- 引入 Element UI -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <el-container>
+      <el-header>
+        <h1 class="title">随机问答测试</h1>
+      </el-header>
+      <el-main>
+        <el-card v-if="currentStep === 'quiz'" class="quiz-card">
+          <div class="question">
+            <h3>{{ currentQuestionIndex + 1 }}. {{ currentQuestion.question }}</h3>
+            <el-radio-group v-model="userAnswer" @change="checkAnswer">
+              <el-radio 
+                v-for="option in currentQuestion.options" 
+                :key="option" 
+                :label="option" 
+                :disabled="showAnswer"
+              >
+                {{ option }}
+              </el-radio>
+            </el-radio-group>
+            <div v-if="showAnswer" class="feedback">
+              <p>正确答案是：<strong>{{ currentQuestion.answer }}</strong></p>
+              <p :class="isCorrect ? 'correct' : 'incorrect'">
+                {{ isCorrect ? "回答正确！" : "回答错误！" }}
+              </p>
+            </div>
+          </div>
+        </el-card>
+        <el-card v-else-if="currentStep === 'result'" class="result-card">
+          <h2>测试结果</h2>
+          <p>你答对了 {{ correctCount }} / {{ quizQuestions.length }} 道题。</p>
+          <el-button type="primary" @click="restartQuiz">重新开始</el-button>
+        </el-card>
+      </el-main>
+    </el-container>
+    <!-- 固定按钮 -->
+    <div class="fixed-buttons">
+      <el-button 
+        v-if="!showAnswer" 
+        type="primary" 
+        @click="checkAnswer" 
+        :disabled="!userAnswer"
+      >
+        提交答案
+      </el-button>
+      <el-button 
+        v-else 
+        type="success" 
+        @click="nextQuestion"
+      >
+        下一题
+      </el-button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

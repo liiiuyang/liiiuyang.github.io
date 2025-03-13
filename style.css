@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .quiz-card, .result-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .question h3 {
+    margin-bottom: 15px;
+  }
+  
+  .feedback p {
+    margin: 5px 0;
+  }
+  
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .incorrect {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* 固定按钮样式 */
+  .fixed-buttons {
+    position: fixed;
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 精准居中 */
+    display: flex;
+    flex-direction: column; /* 垂直排列按钮 */
+    gap: 10px; /* 按钮间距 */
+    z-index: 1000; /* 确保按钮在最上层 */
+  }
+  
+  .fixed-buttons .el-button {
+    width: 200px; /* 固定按钮宽度 */
+  }
